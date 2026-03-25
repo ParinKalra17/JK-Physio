@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const branches = [
   {
-    id: 3,
+    id: 1,
     name: 'JK Physio — Udaipur',
     city: 'Udaipur',
     state: 'Rajasthan',
@@ -17,10 +17,10 @@ const branches = [
     color: '#000000',
     badge: 'Branch',
     badgeColor: '#000000',
-    landmark: 'Golden Square Building, Kalyan Chowk, Nikol',
+    landmark: 'Near RK Circle',
   },
   {
-    id: 1,
+    id: 2,
     name: 'JK Physio — Bhilwara',
     city: 'Bhilwara',
     state: 'Rajasthan',
@@ -37,7 +37,7 @@ const branches = [
     landmark: 'Near RK Circle',
   },
   {
-    id: 2,
+    id: 3,
     name: 'JK Physio — Chittorgarh',
     city: 'Chittorgarh',
     state: 'Rajasthan',
@@ -54,11 +54,45 @@ const branches = [
     landmark: 'Inside MES Hospital, 3rd Floor',
   },
   {
-    id: 3,
+    id: 4,
     name: 'JK Physio — Ahmedabad',
     city: 'Ahmedabad',
     state: 'Gujarat',
     address: '601-603, Golden Square, Kalyan Chowk, Nikol, Ahmedabad, Gujarat',
+    phone: '+91 99289 81863',
+    hours: [
+      { days: 'Mon – Sat', time: '8:00 AM – 8:00 PM' },
+      { days: 'Sunday', time: '10:00 AM – 4:00 PM' },
+    ],
+    mapQuery: 'Golden+Square+Kalyan+Chowk+Nikol+Ahmedabad+Gujarat',
+    color: '#dc2626',
+    badge: 'Branch',
+    badgeColor: '#dc2626',
+    landmark: 'Golden Square Building, Kalyan Chowk, Nikol',
+  },
+  {
+    id: 5,
+    name: 'JK Physio — Shahibagh Ahmedabad',
+    city: 'Ahmedabad',
+    state: 'Gujarat',
+    address: 'F 425 Sumel 11, Nr. Namaste circle, Shahibag. 380004',
+    phone: '+91 99289 81863',
+    hours: [
+      { days: 'Mon – Sat', time: '8:00 AM – 8:00 PM' },
+      { days: 'Sunday', time: '10:00 AM – 4:00 PM' },
+    ],
+    mapQuery: 'Golden+Square+Kalyan+Chowk+Nikol+Ahmedabad+Gujarat',
+    color: '#000000',
+    badge: 'Branch',
+    badgeColor: '#000000',
+    landmark: 'Golden Square Building, Kalyan Chowk, Nikol',
+  },
+  {
+    id: 6,
+    name: 'JK Physio — Gurugram',
+    city: 'Gurugram',
+    state: 'Haryana',
+    address: '65J-01,Sector 83,Vatika Sector Service road,Gurugram,Hr-122004',
     phone: '+91 99289 81863',
     hours: [
       { days: 'Mon – Sat', time: '8:00 AM – 8:00 PM' },
@@ -103,7 +137,7 @@ const BranchCard = ({ branch, index, visible }) => {
             </div>
             <div className="flex items-center gap-1.5">
               <svg className="w-3.5 h-3.5 text-slate-400" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M8 0C5.24 0 3 2.24 3 5c0 3.75 5 11 5 11s5-7.25 5-11c0-2.76-2.24-5-5-5zm0 6.5A1.5 1.5 0 1 1 8 3.5a1.5 1.5 0 0 1 0 3z"/>
+                <path d="M8 0C5.24 0 3 2.24 3 5c0 3.75 5 11 5 11s5-7.25 5-11c0-2.76-2.24-5-5-5zm0 6.5A1.5 1.5 0 1 1 8 3.5a1.5 1.5 0 0 1 0 3z" />
               </svg>
               <span className="text-xs text-slate-400 font-medium">{branch.city}, {branch.state}</span>
             </div>
@@ -183,7 +217,7 @@ const BranchCard = ({ branch, index, visible }) => {
           }}
         >
           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M8 0C5.24 0 3 2.24 3 5c0 3.75 5 11 5 11s5-7.25 5-11c0-2.76-2.24-5-5-5zm0 6.5A1.5 1.5 0 1 1 8 3.5a1.5 1.5 0 0 1 0 3z"/>
+            <path d="M8 0C5.24 0 3 2.24 3 5c0 3.75 5 11 5 11s5-7.25 5-11c0-2.76-2.24-5-5-5zm0 6.5A1.5 1.5 0 1 1 8 3.5a1.5 1.5 0 0 1 0 3z" />
           </svg>
           Open in Google Maps →
         </a>
@@ -283,8 +317,8 @@ const Branches = () => {
             ))}
           </div>
 
-         
-          
+
+
         </div>
       </section>
     </div>

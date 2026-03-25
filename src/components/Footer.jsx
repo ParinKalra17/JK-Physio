@@ -1,4 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 const Footer = () => {
+  const navigate = useNavigate();
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -23,17 +25,25 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Quick Links</h4>
             <ul className="space-y-2">
-              {['home', 'services', 'about', 'testimonials', 'contact', 'doctors', 'our branches'].map((link) => (
-                <li key={link}>
-                  <button
-                    onClick={() => scrollTo(link)}
-                    className="footer-link text-slate-400 text-sm capitalize bg-transparent border-none cursor-pointer transition-colors"
-                    style={{ transition: 'color 0.2s' }}
-                  >
-                    {link}
-                  </button>
-                </li>
-              ))}
+             {[
+  { label: 'home', action: () => scrollTo('home') },
+  { label: 'services', action: () => navigate('/services') },
+  { label: 'about', action: () => scrollTo('about') },
+  { label: 'testimonials', action: () => navigate('testimonials') },
+  { label: 'contact', action: () => scrollTo('contact') },
+  { label: 'doctors', action: () => navigate('doctors') },
+  { label: 'branches', action: () => navigate('branches') },
+].map(({ label, action }) => (
+  <li key={label}>
+    <button
+      onClick={action}
+      className="footer-link text-slate-400 text-sm capitalize bg-transparent border-none cursor-pointer transition-colors"
+      style={{ transition: 'color 0.2s' }}
+    >
+      {label}
+    </button>
+  </li>
+))}
             </ul>
           </div>
 

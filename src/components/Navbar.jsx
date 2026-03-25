@@ -18,11 +18,14 @@ const Navbar = () => {
   };
 
   const navLinks = ['Home'];
+  const goToAbout = () => { navigate('/about'); setMenuOpen(false); };
   const goToDoctors = () => { navigate('/doctors'); setMenuOpen(false); };
   const goToBranches = () => { navigate('/branches'); setMenuOpen(false); };
-  const goToTestimonials = () => { navigate('/testimonials'); setMenuOpen(false); };
   const goToServices = () => { navigate('/services'); setMenuOpen(false); };
-  const goToAbout = () => { navigate('/about'); setMenuOpen(false); };
+  const goToTechnology = () => { navigate('/technology'); setMenuOpen(false); };
+  const goToTestimonials = () => { navigate('/testimonials'); setMenuOpen(false); };
+
+
 
 
   return (
@@ -36,12 +39,14 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <button key={link} onClick={() => scrollTo(link)}
-              className="nav-link text-slate-600 hover:text-brand text-sm font-medium transition-colors pb-0.5 bg-transparent border-none cursor-pointer">
-              {link}
-            </button>
-          ))}
+          <button onClick={() => { navigate('/'); setMenuOpen(false); }}
+            className="nav-link text-slate-600 hover:text-brand text-sm font-medium transition-colors pb-0.5 bg-transparent border-none cursor-pointer">
+            Home
+          </button>
+          <button onClick={goToAbout}
+            className="nav-link text-slate-600 hover:text-brand text-sm font-medium transition-colors pb-0.5 bg-transparent border-none cursor-pointer">
+            About
+          </button>
           <button onClick={goToDoctors}
             className="nav-link text-slate-600 hover:text-brand text-sm font-medium transition-colors pb-0.5 bg-transparent border-none cursor-pointer">
             Our Doctors
@@ -50,20 +55,20 @@ const Navbar = () => {
             className="nav-link text-slate-600 hover:text-brand text-sm font-medium transition-colors pb-0.5 bg-transparent border-none cursor-pointer">
             Branches
           </button>
-          <button onClick={goToTestimonials}
-            className="nav-link text-slate-600 hover:text-brand text-sm font-medium transition-colors pb-0.5 bg-transparent border-none cursor-pointer">
-            Testimonials
-          </button>
           <button onClick={goToServices}
             className="nav-link text-slate-600 hover:text-brand text-sm font-medium transition-colors pb-0.5 bg-transparent border-none cursor-pointer">
             Services
           </button>
-          <button onClick={goToAbout}
+          <button onClick={goToTechnology}
             className="nav-link text-slate-600 hover:text-brand text-sm font-medium transition-colors pb-0.5 bg-transparent border-none cursor-pointer">
-            About
+            Technology
           </button>
-          <button onClick={() => scrollTo('contact')}
-            className="btn-primary bg-brand hover:bg-brand-dark text-white text-sm font-semibold px-5 py-2.5 rounded-xl border-none cursor-pointer">
+          <button onClick={goToTestimonials}
+            className="nav-link text-slate-600 hover:text-brand text-sm font-medium transition-colors pb-0.5 bg-transparent border-none cursor-pointer">
+            Testimonials
+          </button>
+          <button onClick={() => { navigate('/'); setMenuOpen(false); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 300); }}
+            className="btn-primary bg-brand text-white font-semibold px-5 py-3 rounded-xl mt-2 border-none cursor-pointer">
             Book Appointment
           </button>
         </div>
@@ -79,12 +84,14 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-slate-100 px-6 py-4 flex flex-col gap-3 max-h-screen overflow-y-auto">
-          {navLinks.map((link) => (
-            <button key={link} onClick={() => scrollTo(link)}
-              className="text-left text-slate-700 font-medium py-1 bg-transparent border-none cursor-pointer text-base">
-              {link}
-            </button>
-          ))}
+          <button onClick={() => { navigate('/'); setMenuOpen(false); }}
+            className="text-left text-slate-700 font-medium py-1 bg-transparent border-none cursor-pointer text-base">
+            Home
+          </button>
+          <button onClick={goToAbout}
+            className="text-left text-slate-700 font-medium py-1 bg-transparent border-none cursor-pointer text-base">
+            About
+          </button>
           <button onClick={goToDoctors}
             className="text-left text-slate-700 font-medium py-1 bg-transparent border-none cursor-pointer text-base">
             Our Doctors
@@ -93,19 +100,19 @@ const Navbar = () => {
             className="text-left text-slate-700 font-medium py-1 bg-transparent border-none cursor-pointer text-base">
             Branches
           </button>
-          <button onClick={goToTestimonials}
-            className="text-left text-slate-700 font-medium py-1 bg-transparent border-none cursor-pointer text-base">
-            Testimonials
-          </button>
           <button onClick={goToServices}
             className="text-left text-slate-700 font-medium py-1 bg-transparent border-none cursor-pointer text-base">
             Services
           </button>
-          <button onClick={goToAbout}
+          <button onClick={goToTechnology}
             className="text-left text-slate-700 font-medium py-1 bg-transparent border-none cursor-pointer text-base">
-            About
+            Technology
           </button>
-          <button onClick={() => scrollTo('contact')}
+          <button onClick={goToTestimonials}
+            className="text-left text-slate-700 font-medium py-1 bg-transparent border-none cursor-pointer text-base">
+            Testimonials
+          </button>
+          <button onClick={() => { navigate('/'); setMenuOpen(false); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 300); }}
             className="btn-primary bg-brand text-white font-semibold px-5 py-3 rounded-xl mt-2 border-none cursor-pointer">
             Book Appointment
           </button>

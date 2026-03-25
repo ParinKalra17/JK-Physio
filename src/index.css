@@ -209,3 +209,37 @@ input:focus, select:focus, textarea:focus {
   background: rgba(219, 38, 29, 0.15);
   color: var(--brand-dark);
 }
+/* Testimonials carousel */
+.testi-carousel-wrap {
+  overflow: hidden;
+  position: relative;
+  margin-top: 60px;
+}
+.testi-carousel-wrap::before,
+.testi-carousel-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.testi-carousel-wrap::before {
+  left: 0;
+  background: linear-gradient(90deg, #FAFAFA, transparent);
+}
+.testi-carousel-wrap::after {
+  right: 0;
+  background: linear-gradient(-90deg, #FAFAFA, transparent);
+}
+.testi-track {
+  display: flex;
+  gap: 24px;
+  animation: tscroll 45s linear infinite;
+  width: max-content;
+}
+.testi-track:hover { animation-play-state: paused; }
+.testi-track.rev  { animation: tscrollR 50s linear infinite; }
+.testi-track.rev:hover { animation-play-state: paused; }
+@keyframes tscroll  { from { transform: translateX(0); }    to { transform: translateX(-50%); } }
+@keyframes tscrollR { from { transform: translateX(-50%); } to { transform: translateX(0);    } }

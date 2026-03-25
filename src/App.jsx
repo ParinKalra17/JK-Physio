@@ -13,6 +13,7 @@ import OrthopedicRehab from './pages/services/OrthopedicRehab';
 import SportsInjury from './pages/services/SportsInjury';
 import PostSurgical from './pages/services/PostSurgical';
 import RoboticGaitTherapy from './pages/services/RoboticGaitTherapy';
+import Technology, { TechnologyDetail } from './pages/Technology';
 
 const WithLayout = ({ children }) => (
   <div className="min-h-screen bg-white">
@@ -45,6 +46,8 @@ function App() {
         <Route path="/testimonials" element={<WithLayout><Testimonials /></WithLayout>} />
         <Route path="/services" element={<WithLayout><Services /></WithLayout>} />
         <Route path="/about" element={<WithLayout><About /></WithLayout>} />
+        <Route path="/technology" element={<WithLayout><Technology /></WithLayout>} />
+        <Route path="/technology/:id" element={<WithLayout><TechnologyDetail /></WithLayout>} />
       </Routes>
     </BrowserRouter>
   );
