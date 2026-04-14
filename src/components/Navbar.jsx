@@ -68,7 +68,7 @@ const Navbar = () => {
             Testimonials
           </button>
           <button onClick={() => { navigate('/'); setMenuOpen(false); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 300); }}
-            className="btn-primary bg-brand text-white font-semibold px-5 py-3 rounded-xl mt-2 border-none cursor-pointer">
+            className="btn-primary bg-brand text-white font-bold px-5 py-3 rounded-xl mt-2 border-none cursor-pointer">
             Book Appointment
           </button>
         </div>

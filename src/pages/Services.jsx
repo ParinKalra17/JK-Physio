@@ -85,22 +85,28 @@ const ServicesPage = () => {
         </div>
 
         <div className="max-w-6xl mx-auto px-6 relative">
-          {/* Back button */}
-          <button
-            onClick={() => navigate('/')}
-            className="inline-flex items-center gap-2 text-sm font-semibold mb-8 bg-white/70 px-4 py-2 rounded-full border cursor-pointer"
-            style={{ color: '#db261d', borderColor: '#fecaca' }}
-          >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
-              <path d="M10 4L6 8l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            Back to Home
-          </button>
+          <div className="flex items-center gap-6 mb-8">
 
-          <div className="inline-block text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-5"
-            style={{ backgroundColor: '#fff1f1', color: '#db261d' }}>
-            Our Specialties
-          </div>
+  {/* Back button */}
+  <button
+    onClick={() => navigate('/')}
+    className="inline-flex items-center gap-2 text-brand text-sm font-semibold bg-white/70 px-4 py-2 rounded-full border border-red-100 cursor-pointer"
+  >
+    <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+      <path d="M10 4L6 8l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+    
+  </button>
+
+  {/* OUR SPECIALITIES */}
+  <div
+    className="text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full"
+    style={{ backgroundColor: '#fff1f1', color: '#db261d' }}
+  >
+    OUR SPECIALITIES
+  </div>
+
+</div>
           <h1 className="text-5xl font-bold text-slate-800 mb-4">
             Comprehensive Care <span style={{ color: '#db261d' }}>For Every Patient</span>
           </h1>

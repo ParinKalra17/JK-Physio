@@ -263,10 +263,10 @@ const Branches = () => {
             <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
               <path d="M10 4L6 8l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            Back to Home
+            
           </button>
 
-          <div className="inline-block bg-red-50 text-brand text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-5">
+          <div className="inline-block bg-red-50 text-brand text-xs font-bold tracking-widest uppercase px-3 py-2 rounded-full mb-">
             Our Locations
           </div>
           <h1 className="text-5xl font-bold text-slate-800 mb-4">

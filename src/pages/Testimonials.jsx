@@ -147,25 +147,17 @@ const TestimonialsPage = () => {
       {/* ── Hero ─────────────────────────────────────────────── */}
       <div style={{ padding: '100px 5% 60px' }}>
 
-        {/* Back button */}
-        <button
-          onClick={() => navigate('/')}
-          style={{
-            display: 'inline-flex', alignItems: 'center', gap: '8px',
-            fontSize: '.72rem', fontWeight: 700, letterSpacing: '1.5px',
-            textTransform: 'uppercase', padding: '10px 20px',
-            background: '#fff', color: '#C8001E',
-            border: '1px solid #fecaca', borderRadius: '4px',
-            cursor: 'pointer', marginBottom: '48px',
-            transition: 'all .3s',
-          }}
-          onMouseEnter={e => { e.currentTarget.style.background = '#C8001E'; e.currentTarget.style.color = '#fff'; }}
-          onMouseLeave={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = '#C8001E'; }}
-        >
-          <svg width="14" height="14" fill="none" viewBox="0 0 16 16">
-            <path d="M10 4L6 8l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          Back to Home
+       {/* Back button */}
+          <button
+            onClick={() => navigate('/')}
+            className="inline-flex items-center gap-2 text-brand text-sm font-semibold mb-8 bg-white/70 px-4 py-2 rounded-full border border-red-100 cursor-pointer"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+              <path d="M10 4L6 8l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            
+          
+    
         </button>
 
         {/* Split heading */}

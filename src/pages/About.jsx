@@ -44,31 +44,31 @@ const whyItems = [
 ];
 
 const stats = [
-  { icon: 'fas fa-users',       id: 'st1', target: 10000, suffix: '+', label: 'Patients Treated' },
-  { icon: 'fas fa-chart-line',  id: 'st2', target: 98,    suffix: '%', label: 'Recovery Success Rate', gold: true },
-  { icon: 'fas fa-trophy',      id: 'st3', target: 15,    suffix: '+', label: 'Years Experience' },
+  { icon: 'fas fa-users', id: 'st1', target: 10000, suffix: '+', label: 'Patients Treated' },
+  { icon: 'fas fa-chart-line', id: 'st2', target: 98, suffix: '%', label: 'Recovery Success Rate', gold: true },
+  { icon: 'fas fa-trophy', id: 'st3', target: 15, suffix: '+', label: 'Years Experience' },
   { icon: 'fas fa-map-marker-alt', id: 'st4', target: 4, suffix: '+', label: 'City Branches' },
 ];
 
 const machines = [
-  { icon: 'fas fa-bolt',          title: 'IFT & Ultrasound Therapy',  desc: 'Deep tissue healing using interferential current and high-frequency sound waves to reduce inflammation and accelerate tissue repair.' },
-  { icon: 'fas fa-microchip',     title: 'FES & TENS Therapy',        desc: 'Functional electrical stimulation and transcutaneous nerve stimulation for neurological recovery and pain management.' },
-  { icon: 'fas fa-walking',       title: 'Gait Trainer System',       desc: 'Robotic-assisted gait retraining for patients with mobility impairments, enabling safe and progressive walking rehabilitation.' },
-  { icon: 'fas fa-sun',           title: 'Laser Therapy',             desc: 'Low-level laser therapy (LLLT) promotes cellular regeneration, reduces swelling, and fast-tracks recovery from injuries.' },
-  { icon: 'fas fa-arrows-alt-v',  title: 'Spinal Decompression',      desc: 'Motorised traction to decompress the spine, relieve nerve impingement, and treat herniated discs non-surgically.' },
-  { icon: 'fas fa-dumbbell',      title: 'Therapeutic Gym',           desc: 'State-of-the-art gym with therapeutic supervision for strength building and complete fitness transformation.' },
+  { icon: 'fas fa-bolt', title: 'IFT & Ultrasound Therapy', desc: 'Deep tissue healing using interferential current and high-frequency sound waves to reduce inflammation and accelerate tissue repair.' },
+  { icon: 'fas fa-microchip', title: 'FES & TENS Therapy', desc: 'Functional electrical stimulation and transcutaneous nerve stimulation for neurological recovery and pain management.' },
+  { icon: 'fas fa-walking', title: 'Gait Trainer System', desc: 'Robotic-assisted gait retraining for patients with mobility impairments, enabling safe and progressive walking rehabilitation.' },
+  { icon: 'fas fa-sun', title: 'Laser Therapy', desc: 'Low-level laser therapy (LLLT) promotes cellular regeneration, reduces swelling, and fast-tracks recovery from injuries.' },
+  { icon: 'fas fa-arrows-alt-v', title: 'Spinal Decompression', desc: 'Motorised traction to decompress the spine, relieve nerve impingement, and treat herniated discs non-surgically.' },
+  { icon: 'fas fa-dumbbell', title: 'Therapeutic Gym', desc: 'State-of-the-art gym with therapeutic supervision for strength building and complete fitness transformation.' },
 ];
 
 const marqueeItems = [
-  'Paralysis Rehabilitation','Stroke Recovery','Back Pain Relief',
-  'Sports Injury Rehab','Post-Surgery Physio','Slip Disc Treatment',
-  'Gym & Fitness','16+ Years Experience','4 City Branches','10,000+ Patients Healed',
+  'Paralysis Rehabilitation', 'Stroke Recovery', 'Back Pain Relief',
+  'Sports Injury Rehab', 'Post-Surgery Physio', 'Slip Disc Treatment',
+  'Gym & Fitness', '16+ Years Experience', '4 City Branches', '10,000+ Patients Healed',
 ];
 
 /* ─── COMPONENT ─────────────────────────────────────────────── */
 const AboutPage = () => {
   const navigate = useNavigate();
-  const statsRef  = useRef(null);
+  const statsRef = useRef(null);
   const statsDone = useRef(false);
   const [counts, setCounts] = useState({ st1: 0, st2: 0, st3: 0, st4: 0 });
 
@@ -261,10 +261,9 @@ const AboutPage = () => {
           border:2px solid var(--red); opacity:.15; z-index:0;
         }
         .why-img {
-          position:relative; z-index:1;
-          width:100%; border-radius:8px; display:block;
-          aspect-ratio:3/4; object-fit:cover; object-position:top;
-          background:linear-gradient(135deg,#f9f0f1,#fff5f6);
+  position:relative; z-index:1;
+  width:100%; border-radius:8px; display:block;
+  aspect-ratio:3/4; object-fit:cover; object-position:top;
         }
         .why-floater {
           position:absolute; bottom:-24px; right:-24px; z-index:2;
@@ -390,19 +389,19 @@ const AboutPage = () => {
 
         {/* ── HERO ── */}
         <section className="ab-hero">
-          <div style={{ maxWidth:900, position:'relative', zIndex:1 }}>
+          <div style={{ maxWidth: 900, position: 'relative', zIndex: 1 }}>
             <div className="ab-eyebrow" data-sr="up">
               <div className="dot" />
               About JK Physiotherapy &amp; Rehab
             </div>
-            <h1 data-sr="up" style={{ transitionDelay:'.1s' }}>
+            <h1 data-sr="up" style={{ transitionDelay: '.1s' }}>
               Healing Centred<br /><span>on You</span>
             </h1>
-            <p data-sr="up" style={{ transitionDelay:'.2s' }}>
+            <p data-sr="up" style={{ transitionDelay: '.2s' }}>
               Learn about our mission, philosophy, and the team behind JK Physiotherapy &amp; Rehab — Rajasthan's most trusted rehabilitation centre.
             </p>
-            <div className="ab-stats" data-sr="up" style={{ transitionDelay:'.35s' }}>
-              {[['15+','Years of Excellence'],['80+','Specialist Therapists'],['10,000+','Lives Changed'],['98%','Success Rate']].map(([n, l]) => (
+            <div className="ab-stats" data-sr="up" style={{ transitionDelay: '.35s' }}>
+              {[['15+', 'Years of Excellence'], ['80+', 'Specialist Therapists'], ['10,000+', 'Lives Changed'], ['98%', 'Success Rate']].map(([n, l]) => (
                 <div key={l}>
                   <div className="ab-stat-num">{n}</div>
                   <div className="ab-stat-lbl">{l}</div>
@@ -416,14 +415,14 @@ const AboutPage = () => {
         <div className="mq-band">
           <div className="mq-inner">
             {[...marqueeItems, ...marqueeItems].map((item, i) => (
-              <span key={i}>{i % 1 === 0 && i > 0 ? '' : ''}{item}<span className="sep" style={{ padding:'0 8px', color:'rgba(255,255,255,.3)' }}>✦</span></span>
+              <span key={i}>{i % 1 === 0 && i > 0 ? '' : ''}{item}<span className="sep" style={{ padding: '0 8px', color: 'rgba(255,255,255,.3)' }}>✦</span></span>
             ))}
           </div>
         </div>
 
         {/* ── WHO WE ARE ── */}
-        <section className="ap-sec" style={{ background:'#fff' }}>
-          <div className="who-grid" style={{ maxWidth:1200, margin:'0 auto' }}>
+        <section className="ap-sec" style={{ background: '#fff' }}>
+          <div className="who-grid" style={{ maxWidth: 1200, margin: '0 auto' }}>
             {/* Left – image */}
             <div data-sr="left">
               <div className="who-img-wrap">
@@ -432,7 +431,7 @@ const AboutPage = () => {
                 </div>
                 <div className="vid-badge">▶ Watch Our Story</div>
                 <div className="play-btn">
-                  <i className="fas fa-play" style={{ marginLeft:3 }} />
+                  <i className="fas fa-play" style={{ marginLeft: 3 }} />
                 </div>
               </div>
             </div>
@@ -443,9 +442,9 @@ const AboutPage = () => {
               <h2 className="sec-h2">JK Physio &amp; Rehab —<br /><span>Transforming Lives</span> Since 2008</h2>
               <blockquote className="who-quote">
                 "Every patient who walks through our doors carries a story. Our mission is to help them write a better chapter."
-                <small style={{ fontSize:'.75rem', fontStyle:'normal', color:'var(--txt3)', marginTop:8, display:'block' }}>— Dr. Piyush Devpura, Founder</small>
+                <small style={{ fontSize: '.75rem', fontStyle: 'normal', color: 'var(--txt3)', marginTop: 8, display: 'block' }}>— Dr. Piyush Devpura, Founder</small>
               </blockquote>
-              <p className="sec-p" style={{ marginTop:0, marginBottom:28 }}>
+              <p className="sec-p" style={{ marginTop: 0, marginBottom: 28 }}>
                 JK Physio is Udaipur's premier physiotherapy and rehabilitation centre, now spanning 4 cities across Rajasthan and Gujarat. Led by Dr. Piyush Devpura with 16+ years of expertise, we combine advanced technology with compassionate, evidence-based care to help patients reclaim their lives.
               </p>
               <div className="who-list">
@@ -459,7 +458,7 @@ const AboutPage = () => {
                   </div>
                 ))}
               </div>
-              <button className="btn-red" style={{ marginTop:28 }} onClick={() => navigate('/#contact')}>
+              <button className="btn-red" style={{ marginTop: 28 }} onClick={() => navigate('/#contact')}>
                 <i className="fas fa-calendar-check" /> Book Consultation
               </button>
             </div>
@@ -467,50 +466,73 @@ const AboutPage = () => {
         </section>
 
         {/* ── WHY CHOOSE US ── */}
-        <section className="ap-sec" style={{ background:'var(--off)' }}>
-          <div className="why-grid" style={{ maxWidth:1200, margin:'0 auto' }}>
-            {/* Left – doctor image with floater */}
-            <div data-sr="left" style={{ position:'relative', paddingBottom:32, paddingRight:32 }}>
-              <div className="why-corner" />
-              <div className="why-img" style={{
-                background:'linear-gradient(135deg,#f9f0f1,#fff5f6)',
-                display:'flex', alignItems:'center', justifyContent:'center',
-                fontSize:'5rem', color:'var(--red)', opacity:.25
-              }}>
-                <i className="fas fa-user-md" />
-              </div>
-              <div className="why-floater">
-                <div className="wf-num">16+</div>
-                <div className="wf-text">Years of<br />Excellence</div>
-              </div>
-            </div>
+<section className="ap-sec" style={{ background:'var(--off)' }}>
+  <div className="why-grid" style={{ maxWidth:1200, margin:'0 auto' }}>
 
-            {/* Right – numbered list */}
-            <div data-sr="right">
-              <div className="sec-label"><span className="ln" />Why Choose Us?</div>
-              <h2 className="sec-h2">Your Ultimate Partner<br />in <span>Recovery</span></h2>
-              <p className="sec-p" style={{ marginBottom:32 }}>
-                Your success in rehabilitation depends on choosing the right partner. Here's why thousands trust JK Physio.
-              </p>
-              {whyItems.map(item => (
-                <div className="why-item" key={item.num}>
-                  <div className="wyi-num">{item.num}</div>
-                  <div>
-                    <div className="wyi-title">{item.title}</div>
-                    <div className="wyi-desc">{item.desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
+    {/* Left – doctor photo */}
+    <div data-sr="left" style={{ position:'relative', paddingBottom:32, paddingRight:32 }}>
+      {/* Red corner accent */}
+      <div style={{
+        position:'absolute', top:-16, left:-16,
+        width:100, height:100, zIndex:0,
+        border:'2px solid #C8001E', borderRadius:4, opacity:.2,
+      }} />
+
+      <img  src="dr-piyush.jpeg"
+      alt="Dr. Piyush Devpura"
+      style={{
+    position:'relative', zIndex:1,
+    width:'100%', display:'block',
+    borderRadius:'8px',
+    objectFit:'cover',
+    objectPosition:'top center',
+    aspectRatio:'3/4',
+    boxShadow:'0 20px 60px rgba(0,0,0,0.15)',
+  }}
+/>
+
+      {/* Floating badge */}
+      <div style={{
+        position:'absolute', bottom:-24, right:-24, zIndex:2,
+        background:'#C8001E', color:'#fff',
+        borderRadius:'8px', padding:'22px 26px',
+        textAlign:'center',
+        boxShadow:'0 12px 40px rgba(200,0,30,.35)',
+      }}>
+        <div style={{ fontFamily:"'Playfair Display',serif", fontSize:'2.2rem', fontWeight:700 }}>16+</div>
+        <div style={{ fontSize:'.68rem', fontWeight:500, letterSpacing:'2px', textTransform:'uppercase', opacity:.8, marginTop:4 }}>
+          Years of<br />Excellence
+        </div>
+      </div>
+    </div>
+
+    {/* Right – numbered list */}
+    <div data-sr="right">
+      <div className="sec-label"><span className="ln" />Why Choose Us?</div>
+      <h2 className="sec-h2">Your Ultimate Partner<br />in <span>Recovery</span></h2>
+      <p className="sec-p" style={{ marginBottom:32 }}>
+        Your success in rehabilitation depends on choosing the right partner. Here's why thousands trust JK Physio.
+      </p>
+      {whyItems.map(item => (
+        <div className="why-item" key={item.num}>
+          <div className="wyi-num">{item.num}</div>
+          <div>
+            <div className="wyi-title">{item.title}</div>
+            <div className="wyi-desc">{item.desc}</div>
           </div>
-        </section>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
 
         {/* ── STATS DARK ── */}
         <section className="stats-dark" ref={statsRef}>
           <div className="stats-row">
             {stats.map((s, i) => (
-              <div className="stat-box" key={s.id} data-sr="up" style={{ transitionDelay:`${i * 0.07}s` }}>
-                <i className={s.icon} style={{ fontSize:'2rem', color:'rgba(255,255,255,.2)', marginBottom:16, display:'block' }} />
+              <div className="stat-box" key={s.id} data-sr="up" style={{ transitionDelay: `${i * 0.07}s` }}>
+                <i className={s.icon} style={{ fontSize: '2rem', color: 'rgba(255,255,255,.2)', marginBottom: 16, display: 'block' }} />
                 <div className="stat-n">
                   <span>{counts[s.id].toLocaleString()}</span>
                   <span className={`plus ${s.gold ? 'gold' : ''}`}>{s.suffix}</span>
@@ -522,9 +544,9 @@ const AboutPage = () => {
         </section>
 
         {/* ── TECHNOLOGY / EQUIPMENT ── */}
-        <section className="ap-sec" style={{ background:'var(--off)' }}>
-          <div style={{ maxWidth:1200, margin:'0 auto' }}>
-            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:60, alignItems:'end', marginBottom:60 }}>
+        <section className="ap-sec" style={{ background: 'var(--off)' }}>
+          <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'end', marginBottom: 60 }}>
               <div data-sr="left">
                 <div className="sec-label"><span className="ln" />Advanced Technology</div>
                 <h2 className="sec-h2">World-Class <span>Equipment</span></h2>
@@ -536,13 +558,13 @@ const AboutPage = () => {
 
             <div className="spec-grid">
               {machines.map((m, i) => (
-                <div className="spec-card" key={m.title} data-sr="zoom" style={{ transitionDelay:`${0.05 * (i + 1)}s` }}>
+                <div className="spec-card" key={m.title} data-sr="zoom" style={{ transitionDelay: `${0.05 * (i + 1)}s` }}>
                   <div className="spec-bg" />
                   <div className="spec-overlay" />
                   <i className={`${m.icon} spec-icon-bg`} />
                   <div className="spec-body">
                     <div className="spec-title">{m.title}</div>
-                    <div style={{ fontSize:'.75rem', color:'rgba(255,255,255,.55)', lineHeight:1.5, marginBottom:8 }}>{m.desc}</div>
+                    <div style={{ fontSize: '.75rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.5, marginBottom: 8 }}>{m.desc}</div>
                     <div className="spec-link"><i className="fas fa-arrow-right" /> Learn More</div>
                   </div>
                 </div>
@@ -553,9 +575,9 @@ const AboutPage = () => {
 
         {/* ── CTA ── */}
         <section className="cta-dark">
-          <div style={{ position:'relative', zIndex:1 }}>
-            <div className="sec-label" style={{ color:'rgba(255,255,255,.4)' }}>
-              <span className="ln" style={{ background:'rgba(255,255,255,.2)' }} />
+          <div style={{ position: 'relative', zIndex: 1 }}>
+            <div className="sec-label" style={{ color: 'rgba(255,255,255,.4)' }}>
+              <span className="ln" style={{ background: 'rgba(255,255,255,.2)' }} />
               Begin Your Journey
             </div>
             <h2 className="cta-title">
@@ -569,7 +591,7 @@ const AboutPage = () => {
             <button className="btn-red" onClick={() => navigate('/doctors')}>
               <i className="fas fa-user-md" /> Meet Our Doctors
             </button>
-            <button className="btn-outline" style={{ color:'#fff', borderColor:'rgba(255,255,255,.3)' }}
+            <button className="btn-outline" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.3)' }}
               onClick={() => navigate('/#contact')}>
               <i className="fas fa-calendar-check" /> Book Appointment
             </button>

@@ -487,10 +487,12 @@ const TechnologyPage = () => {
           {/* Back button */}
           <button
             onClick={() => navigate('/')}
-            className="inline-flex items-center gap-2 text-sm font-semibold mb-8 bg-white/70 px-4 py-2 rounded-full border cursor-pointer"
-            style={{ color: '#db261d', borderColor: '#fecaca' }}
+            className="inline-flex items-center gap-2 text-brand text-sm font-semibold mb-8 bg-white/70 px-4 py-2 rounded-full border border-red-100 cursor-pointer"
           >
-            ← Back to Home
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+              <path d="M10 4L6 8l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            
           </button>
 
           <div className="inline-block text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-5"
@@ -509,7 +511,7 @@ const TechnologyPage = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-6 lg:justify-end">
-              {[['6+', 'Technologies'], ['5000+', 'Patients Treated'], ['16+', 'Years Experience']].map(([num, label]) => (
+              {[['6+', 'Technologies'], ['10000+', 'Patients Treated'], ['16+', 'Years Experience']].map(([num, label]) => (
                 <div key={label} className="text-center">
                   <div className="text-3xl font-bold text-slate-800">{num}</div>
                   <div className="text-xs text-slate-400 font-medium mt-0.5">{label}</div>
