@@ -12,12 +12,12 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollTo = (id) => {
-    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
-    setMenuOpen(false);
-  };
+  // const scrollTo = (id) => {
+  //   document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
+  //   setMenuOpen(false);
+  // };
 
-  const navLinks = ['Home'];
+  // const navLinks = ['Home'];
   const goToAbout = () => { navigate('/about'); setMenuOpen(false); };
   const goToDoctors = () => { navigate('/doctors'); setMenuOpen(false); };
   const goToBranches = () => { navigate('/branches'); setMenuOpen(false); };
