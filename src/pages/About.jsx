@@ -478,7 +478,7 @@ const AboutPage = () => {
         border:'2px solid #C8001E', borderRadius:4, opacity:.2,
       }} />
 
-      <img  src="dr-piyush.jpeg"
+      <img  src="/dr-piyush.jpeg"
       alt="Dr. Piyush Devpura"
       style={{
     position:'relative', zIndex:1,
