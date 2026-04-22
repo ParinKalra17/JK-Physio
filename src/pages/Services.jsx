@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const services = [
   {
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12">
+      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
         <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="2" />
         <path d="M24 14v10l6 4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
         <path d="M16 28c2 4 5 6 8 6s6-2 8-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -18,7 +18,7 @@ const services = [
   },
   {
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12">
+      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
         <path d="M12 36L24 12l12 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M16 28h16" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
         <circle cx="24" cy="10" r="3" fill="currentColor" />
@@ -32,7 +32,7 @@ const services = [
   },
   {
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12">
+      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
         <path d="M24 8C15.16 8 8 15.16 8 24s7.16 16 16 16 16-7.16 16-16" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
         <path d="M32 8l8 0M40 8l0 8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
         <path d="M20 24c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -46,7 +46,7 @@ const services = [
   },
   {
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12">
+      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
         <rect x="10" y="18" width="28" height="20" rx="3" stroke="currentColor" strokeWidth="2.5" />
         <path d="M18 18v-4a6 6 0 0112 0v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
         <path d="M24 28v4M20 30h8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
@@ -74,7 +74,7 @@ const ServicesPage = () => {
 
       {/* Hero Banner */}
       <div
-        className="relative pt-28 pb-16 overflow-hidden"
+        className="relative pt-40 pb-16 overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 50%, #fff5f5 100%)' }}
       >
         <div className="absolute inset-0 pointer-events-none">
@@ -116,7 +116,7 @@ const ServicesPage = () => {
 
           {/* Stats */}
           <div className="flex flex-wrap gap-10 mt-10 pt-8 border-t" style={{ borderColor: '#fecaca' }}>
-            {[['5+', 'Specialties'], ['10000+', 'Patients Treated'], ['16+', 'Years Experience'], ['98%', 'Success Rate']].map(([num, label]) => (
+            {[['5+', 'Specialties'], ['50000+', 'Patients Treated'], ['16+', 'Years Experience'], ['98%', 'Success Rate']].map(([num, label]) => (
               <div key={label}>
                 <div className="text-2xl font-bold text-slate-800" style={{ fontFamily: "'Montesserat" }}>{num}</div>
                 <div className="text-xs text-slate-400 font-medium mt-0.5">{label}</div>
@@ -169,7 +169,12 @@ const ServicesPage = () => {
                 </div>
 
                 {/* Icon */}
-                <div className="icon-hover mt-4 mb-5" style={{ color: '#db261d' }}>{s.icon}</div>
+                <div
+                  className="icon-hover mt-4 mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#fff5f5]"
+                  style={{ color: '#db261d' }}
+                >
+                  {s.icon}
+                </div>
 
                 <h3 className="text-xl font-bold text-slate-800 mb-3">{s.title}</h3>
                 <p className="text-slate-400 leading-relaxed text-sm mb-6">{s.desc}</p>

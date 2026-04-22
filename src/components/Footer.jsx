@@ -27,12 +27,13 @@ const Footer = () => {
             <ul className="space-y-2">
              {[
   { label: 'home', action: () => scrollTo('home') },
-  { label: 'services', action: () => navigate('/services') },
-  { label: 'about', action: () => scrollTo('about') },
-  { label: 'testimonials', action: () => navigate('testimonials') },
-  { label: 'contact', action: () => scrollTo('contact') },
+  { label: 'about', action: () => navigate('/about') },
   { label: 'doctors', action: () => navigate('doctors') },
   { label: 'branches', action: () => navigate('branches') },
+  { label: 'services', action: () => navigate('/services') },
+  { label: 'technology', action: () => navigate('/technology') },
+  { label: 'testimonials', action: () => navigate('testimonials') },
+
 ].map(({ label, action }) => (
   <li key={label}>
     <button

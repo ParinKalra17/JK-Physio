@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Doctors from './pages/Doctors';
 import Branches from './pages/Branches';
+import NeurologicalRehab from './pages/services/NeurologicalRehab';
 import OrthopedicRehab from './pages/services/OrthopedicRehab';
 import SportsInjury from './pages/services/SportsInjury';
 import PostSurgical from './pages/services/PostSurgical';
@@ -27,6 +28,8 @@ const HomePage = () => (
   <WithLayout>
     <Hero />
     <About />
+    <Doctors />
+    <Branches onHomePage={true} />
     <Contact />
   </WithLayout>
 );
@@ -43,6 +46,7 @@ function App() {
         <Route path="/services/post-surgical" element={<WithLayout><PostSurgical /></WithLayout>} />
         <Route path="/services/robotic-gait-therapy" element={<WithLayout><RoboticGaitTherapy /></WithLayout>} />
         <Route path="/services/orthopedic-rehab" element={<WithLayout><OrthopedicRehab /></WithLayout>} />
+        <Route path="/services/neurological-rehab" element={<WithLayout><NeurologicalRehab /></WithLayout>} />
         <Route path="/testimonials" element={<WithLayout><Testimonials /></WithLayout>} />
         <Route path="/services" element={<WithLayout><Services /></WithLayout>} />
         <Route path="/about" element={<WithLayout><About /></WithLayout>} />

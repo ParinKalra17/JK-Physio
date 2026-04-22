@@ -4,201 +4,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 /* ─── DATA ─────────────────────────────────────────── */
 const technologies = [
   {
-    id: 'ift-ultrasound',
-    icon: '⚡',
-    faIcon: 'fas fa-bolt',
-    title: 'IFT & Ultrasound Therapy',
-    shortDesc: 'Deep tissue electrical stimulation and therapeutic ultrasound for pain relief and tissue healing.',
-    tag: 'Pain Relief',
-    color: '#db261d',
-    heroGradient: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 60%, #fff5f5 100%)',
-    detail: {
-      overview: `Interferential Therapy (IFT) and Ultrasound Therapy are two of the most powerful non-invasive physiotherapy modalities used at JK Physio. Together, they form a comprehensive approach to managing acute and chronic pain, reducing inflammation, and accelerating tissue repair.`,
-      howItWorks: `IFT uses medium-frequency electrical currents that cross within the tissue, creating a low-frequency therapeutic effect deep within muscles and joints. This stimulates nerve fibres, improves blood circulation, and triggers the release of natural pain-relieving endorphins.\n\nTherapeutic Ultrasound delivers high-frequency sound waves into the tissue, creating a micro-massage effect at the cellular level. It increases tissue extensibility, promotes collagen production, and speeds up the healing of soft tissue injuries.`,
-      conditions: [
-        'Chronic back and neck pain',
-        'Arthritis and joint inflammation',
-        'Muscle spasms and cramps',
-        'Ligament sprains and strains',
-        'Post-surgical swelling',
-        'Frozen shoulder',
-        'Tennis/Golfer\'s elbow',
-        'Soft tissue injuries',
-      ],
-      benefits: [
-        { title: 'Non-Invasive', desc: 'No injections or surgery — completely safe and painless.' },
-        { title: 'Fast Relief', desc: 'Most patients feel significant pain relief within 2–3 sessions.' },
-        { title: 'Deep Penetration', desc: 'Reaches muscles and joints up to 5cm deep for targeted therapy.' },
-        { title: 'Reduces Swelling', desc: 'Promotes lymphatic drainage and reduces inflammatory response.' },
-      ],
-      sessions: '6–12 sessions recommended',
-      duration: '20–40 minutes per session',
-    },
-  },
-  {
-    id: 'fes-tens',
-    icon: '🔬',
-    faIcon: 'fas fa-microchip',
-    title: 'FES & TENS Therapy',
-    shortDesc: 'Functional Electrical Stimulation and Transcutaneous Electrical Nerve Stimulation for nerve and muscle recovery.',
-    tag: 'Neuro Rehab',
-    color: '#db261d',
-    heroGradient: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 60%, #fff5f5 100%)',
-    detail: {
-      overview: `FES (Functional Electrical Stimulation) and TENS (Transcutaneous Electrical Nerve Stimulation) are advanced electrotherapy techniques that play a crucial role in neurological rehabilitation and pain management at JK Physio. These are particularly transformative for patients recovering from stroke, paralysis, and nerve damage.`,
-      howItWorks: `FES uses carefully calibrated electrical pulses to stimulate paralyzed or weakened muscles, causing them to contract in a functional pattern. This re-trains the neuromuscular system, helping the brain re-learn movement patterns lost due to stroke or spinal injury.\n\nTENS works by sending gentle electrical impulses through the skin to the nerve fibres, which effectively "gates" the pain signal before it reaches the brain — providing immediate, drug-free pain relief.`,
-      conditions: [
-        'Stroke and hemiplegia',
-        'Spinal cord injuries',
-        'Foot drop correction',
-        'Muscle weakness and atrophy',
-        'Nerve damage (neuropathy)',
-        'Chronic pain conditions',
-        'Post-surgical pain management',
-        'Parkinson\'s gait improvement',
-      ],
-      benefits: [
-        { title: 'Muscle Re-education', desc: 'Reactivates dormant muscles after neurological injury.' },
-        { title: 'Drug-Free Pain Relief', desc: 'Provides immediate pain control without medication.' },
-        { title: 'Prevents Atrophy', desc: 'Keeps muscles active even when voluntary movement is limited.' },
-        { title: 'Neuroplasticity', desc: 'Promotes brain rewiring for long-term recovery from stroke.' },
-      ],
-      sessions: '10–20 sessions recommended',
-      duration: '30–45 minutes per session',
-    },
-  },
-  {
-    id: 'gait-trainer',
-    icon: '🚶',
-    faIcon: 'fas fa-walking',
-    title: 'Gait Trainer System',
-    shortDesc: 'Robotic-assisted walking rehabilitation system for neurological and orthopaedic patients.',
-    tag: 'Mobility',
-    color: '#db261d',
-    heroGradient: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 60%, #fff5f5 100%)',
-    detail: {
-      overview: `The Gait Trainer System at JK Physio is one of the most advanced rehabilitation tools in Rajasthan. It provides body-weight-supported treadmill training combined with robotic assistance, enabling patients who cannot walk independently to practice the full gait cycle safely and effectively.`,
-      howItWorks: `The patient is supported by a harness that partially offloads their body weight, while the system guides their legs through a natural walking pattern. Sensors monitor every step, providing real-time feedback. The system gradually reduces assistance as the patient regains strength and coordination, following a progressive rehabilitation protocol.\n\nThis approach triggers neuroplasticity — the brain's ability to rewire and form new neural pathways for movement — leading to functional walking recovery even in severe cases.`,
-      conditions: [
-        'Post-stroke gait rehabilitation',
-        'Spinal cord injury recovery',
-        'Multiple sclerosis',
-        'Traumatic brain injury',
-        'Hip and knee replacement recovery',
-        'Parkinson\'s disease',
-        'Cerebral palsy',
-        'Lower limb weakness',
-      ],
-      benefits: [
-        { title: 'Safe Early Mobilisation', desc: 'Allows walking practice even before independent standing.' },
-        { title: 'Consistent Repetition', desc: 'Hundreds of correct steps per session to retrain the brain.' },
-        { title: 'Real-Time Monitoring', desc: 'Sensors track symmetry, step length, and weight distribution.' },
-        { title: 'Faster Recovery', desc: 'Studies show 3–5x faster walking recovery vs conventional therapy.' },
-      ],
-      sessions: '15–30 sessions recommended',
-      duration: '45–60 minutes per session',
-    },
-  },
-  {
-    id: 'laser-traction',
-    icon: '☀️',
-    faIcon: 'fas fa-sun',
-    title: 'Laser & Traction Therapy',
-    shortDesc: 'High-intensity laser therapy and mechanical traction for spine decompression and tissue regeneration.',
-    tag: 'Spine Care',
-    color: '#db261d',
-    heroGradient: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 60%, #fff5f5 100%)',
-    detail: {
-      overview: `High-Intensity Laser Therapy (HILT) and Mechanical Traction are two cornerstone treatments in our spine care programme. Together, they address both the cellular healing of damaged tissue and the mechanical decompression of compressed spinal structures — offering a comprehensive solution for disc problems, sciatica, and chronic spinal conditions.`,
-      howItWorks: `HILT uses high-powered laser energy to penetrate deep into spinal tissues, stimulating cellular energy production (ATP synthesis), reducing inflammation at the disc level, and promoting regeneration of damaged nerve tissue. It is particularly effective for disc herniations and nerve root impingement.\n\nMechanical Traction applies a controlled pulling force along the spine using a computerised traction table. This creates negative pressure within the disc, drawing herniated material back, relieving nerve compression, and restoring normal disc height.`,
-      conditions: [
-        'Disc herniation (L4-L5, L5-S1)',
-        'Cervical and lumbar spondylosis',
-        'Sciatica and radiculopathy',
-        'Degenerative disc disease',
-        'Spinal stenosis',
-        'Facet joint arthritis',
-        'Chronic neck and back pain',
-        'Nerve root compression',
-      ],
-      benefits: [
-        { title: 'Non-Surgical Solution', desc: 'Achieves disc decompression without surgery or injections.' },
-        { title: 'Cellular Regeneration', desc: 'Laser stimulates healing at the cellular level within damaged tissue.' },
-        { title: 'Immediate Relief', desc: 'Most patients experience pain reduction after the first session.' },
-        { title: 'Long-Lasting Results', desc: 'Addresses root cause rather than just masking symptoms.' },
-      ],
-      sessions: '8–15 sessions recommended',
-      duration: '30–50 minutes per session',
-    },
-  },
-  {
-    id: 'spinal-decompression',
-    icon: '🦴',
-    faIcon: 'fas fa-arrows-alt-v',
-    title: 'Spinal Decompression',
-    shortDesc: 'Non-surgical computerised spinal decompression therapy for disc injuries and chronic back pain.',
-    tag: 'Advanced',
-    color: '#db261d',
-    heroGradient: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 60%, #fff5f5 100%)',
-    detail: {
-      overview: `Non-Surgical Spinal Decompression at JK Physio uses a sophisticated, computer-controlled traction table to gently stretch the spine in a precise, targeted manner. This is distinct from simple mechanical traction — it uses a specific logarithmic decompression curve that prevents muscle guarding, allowing true disc decompression to occur.`,
-      howItWorks: `The patient lies on the decompression table while a computerised system applies gentle, intermittent traction forces specific to their diagnosis. The system alternates between decompression and relaxation phases, creating a pumping effect that draws water, oxygen, and nutrients back into the disc — reversing the degeneration process.\n\nEach session is tailored to the patient's specific spinal level, disc condition, and pain tolerance, ensuring maximum therapeutic effect with minimal discomfort.`,
-      conditions: [
-        'Bulging and herniated discs',
-        'Degenerative disc disease',
-        'Posterior facet syndrome',
-        'Spinal stenosis',
-        'Sciatica',
-        'Failed back surgery syndrome',
-        'Chronic lower back pain',
-        'Cervical disc problems',
-      ],
-      benefits: [
-        { title: 'Targeted Precision', desc: 'Computer-controlled forces isolate specific spinal segments.' },
-        { title: 'Disc Rehydration', desc: 'Restores disc height and improves nutrient exchange within discs.' },
-        { title: 'No Muscle Guarding', desc: 'Logarithmic curve prevents spasm, allowing deeper decompression.' },
-        { title: 'Surgery Alternative', desc: 'Many surgical candidates avoid operations after decompression therapy.' },
-      ],
-      sessions: '12–20 sessions recommended',
-      duration: '30–45 minutes per session',
-    },
-  },
-  {
-    id: 'therapeutic-gym',
-    icon: '🏋️',
-    faIcon: 'fas fa-dumbbell',
-    title: 'Therapeutic Gym',
-    shortDesc: 'Fully equipped therapeutic gym with specialised rehab equipment for strength, conditioning and functional recovery.',
-    tag: 'Rehabilitation',
-    color: '#db261d',
-    heroGradient: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 60%, #fff5f5 100%)',
-    detail: {
-      overview: `The JK Physio Therapeutic Gym at our Udaipur headquarters is unlike a conventional fitness gym. Every piece of equipment has been selected specifically for rehabilitation purposes, and every workout is supervised and prescribed by our physiotherapy team. This is where recovery transforms into strength.`,
-      howItWorks: `Once a patient has completed their acute physiotherapy phase, the therapeutic gym bridges the gap between clinical recovery and returning to full activity. Our physiotherapists design individualised exercise programmes that progress in difficulty, targeting specific functional goals — whether it's returning to sport, resuming work duties, or regaining independence in daily activities.\n\nThe gym also runs dedicated programmes for weight management, geriatric fitness, post-surgical conditioning, and sports performance enhancement — all under medical supervision.`,
-      conditions: [
-        'Post-physiotherapy strengthening',
-        'Sports performance and conditioning',
-        'Post-surgical rehabilitation',
-        'Weight management programmes',
-        'Geriatric fitness and fall prevention',
-        'Core strengthening for back pain',
-        'Cardiovascular rehabilitation',
-        'General fitness under supervision',
-      ],
-      benefits: [
-        { title: 'Medical Supervision', desc: 'All exercise under direct physiotherapy guidance for safety.' },
-        { title: 'Progressive Programmes', desc: 'Tailored plans that evolve with your recovery milestones.' },
-        { title: 'Full Recovery', desc: 'Bridges the gap from clinic treatment to active, normal life.' },
-        { title: 'Long-Term Wellness', desc: 'Builds habits and strength that prevent future injury recurrence.' },
-      ],
-      sessions: 'Ongoing programmes available',
-      duration: '45–90 minutes per session',
-    },
-  },
-  // ─── ADD THIS OBJECT to the technologies array in Technology.jsx ───
-// Paste it after the last technology (Therapeutic Gym) and before the closing ];
-
-  {
     id: 'robotic-exoskeleton',
     icon: '🦾',
     faIcon: 'fas fa-robot',
@@ -252,6 +57,232 @@ const technologies = [
       duration: '45–75 minutes per session',
     },
   },
+  {
+    id: 'rymo-mobi-l',
+    icon: '🤖',
+    faIcon: 'fas fa-hand-paper',
+    title: 'Rymo Mobi-L',
+    shortDesc: 'Advanced robotic limb mobilisation system for upper and lower extremity rehabilitation and motor re-education.',
+    tag: 'Robotic Therapy',
+    color: '#db261d',
+    heroGradient: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 60%, #fff5f5 100%)',
+    detail: {
+      overview: `The Rymo Mobi-L is a state-of-the-art robotic rehabilitation system designed to deliver precise, controlled passive and active-assisted mobilisation of the limbs. At JK Physio, it forms a critical part of our early-stage neurological and orthopaedic rehabilitation, enabling movement therapy from the very first days of recovery — even when the patient has no voluntary muscle activity.`,
+      howItWorks: `The Rymo Mobi-L uses programmable robotic drives to move the patient's limb through smooth, physiologically correct ranges of motion. The therapist configures the specific joint, range of motion, speed, and resistance level through a digital control panel. The device can operate in fully passive mode (the robot does all the work), active-assisted mode (the patient initiates and the robot helps), or resistive mode (for progressive strengthening).\n\nThis cyclical, repetitive movement stimulates sensory receptors in the joints and muscles, sending proprioceptive signals to the brain that encourage neuroplastic reorganisation. It also prevents joint contractures, maintains cartilage health, and improves local circulation — critical for patients on bed rest or with limited mobility.`,
+      conditions: [
+        'Early stroke and hemiplegia rehabilitation',
+        'Post-surgical joint mobilisation',
+        'Spinal cord injury upper/lower limb therapy',
+        'Joint contracture prevention and reversal',
+        'Peripheral nerve injury recovery',
+        'Orthopaedic post-fracture rehabilitation',
+        'Prolonged bed rest deconditioning',
+        'Shoulder, elbow, hip, and knee stiffness',
+      ],
+      benefits: [
+        {
+          title: 'Early Mobilisation',
+          desc: 'Begins therapeutic movement from day one of recovery, even in the absence of voluntary control.',
+        },
+        {
+          title: 'Prevents Contractures',
+          desc: 'Maintains full joint range of motion in immobile or paralysed patients, preventing permanent stiffness.',
+        },
+        {
+          title: 'Sensory Stimulation',
+          desc: 'Repetitive joint movement sends powerful proprioceptive signals that support brain and nerve recovery.',
+        },
+        {
+          title: 'Progressive Modes',
+          desc: 'Advances seamlessly from passive through active-assisted to resistive training as function returns.',
+        },
+      ],
+      sessions: '10–25 sessions recommended',
+      duration: '30–45 minutes per session',
+    },
+  },
+  {
+    id: 'dts-decompression',
+    icon: '🦴',
+    faIcon: 'fas fa-arrows-alt-v',
+    title: 'DTS: Decompression Traction System',
+    shortDesc: 'Non-surgical computerised spinal decompression therapy for disc herniations, sciatica, and chronic back and neck pain.',
+    tag: 'Spine Care',
+    color: '#db261d',
+    heroGradient: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 60%, #fff5f5 100%)',
+    detail: {
+      overview: `The DTS (Decompression Traction System) at JK Physio is a sophisticated, computer-controlled spinal decompression platform that offers a non-surgical solution to disc herniations, nerve compression, and chronic spinal pain. Unlike conventional traction, DTS applies precisely calculated, logarithmically varied forces that prevent the muscle-guarding reflex — allowing true, deep decompression of spinal discs to take place.`,
+      howItWorks: `The patient is comfortably positioned on the DTS table, with a pelvic or cervical harness fitted depending on whether lumbar or cervical treatment is required. The computer-controlled system applies a gentle, cyclical distraction force — pulling the vertebrae apart to create negative intradiscal pressure. This negative pressure draws herniated or bulging disc material back towards the centre, reduces compression on trapped nerve roots, and stimulates an influx of water, oxygen, and nutrients into the disc.\n\nEach session is individually programmed with the exact spinal level, force magnitude, and treatment duration specific to that patient's diagnosis. The alternating cycles of decompression and relaxation create a rhythmic pumping action that accelerates disc rehydration and healing over the course of the treatment programme.`,
+      conditions: [
+        'Lumbar disc herniation (L4-L5, L5-S1)',
+        'Cervical disc herniation',
+        'Sciatica and leg pain radiculopathy',
+        'Degenerative disc disease',
+        'Spinal stenosis',
+        'Facet joint syndrome',
+        'Chronic lower back and neck pain',
+        'Failed back surgery syndrome',
+      ],
+      benefits: [
+        {
+          title: 'True Disc Decompression',
+          desc: 'Logarithmic force curve bypasses muscle guarding for genuine intradiscal pressure reduction.',
+        },
+        {
+          title: 'Disc Rehydration',
+          desc: 'Negative pressure draws nutrients and hydration back into degenerated discs, reversing damage.',
+        },
+        {
+          title: 'Nerve Root Relief',
+          desc: 'Directly reduces pressure on compressed nerve roots, relieving sciatica and radicular pain.',
+        },
+        {
+          title: 'Surgery Alternative',
+          desc: 'Many patients avoid spine surgery entirely after completing a DTS decompression programme.',
+        },
+      ],
+      sessions: '12–20 sessions recommended',
+      duration: '30–45 minutes per session',
+    },
+  },
+  {
+    id: 'class-4-laser',
+    icon: '☀️',
+    faIcon: 'fas fa-sun',
+    title: 'Class 4 Laser Therapy',
+    shortDesc: 'High-intensity Class 4 laser for deep tissue regeneration, inflammation reduction, and accelerated healing.',
+    tag: 'Laser Therapy',
+    color: '#db261d',
+    heroGradient: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 60%, #fff5f5 100%)',
+    detail: {
+      overview: `Class 4 High-Intensity Laser Therapy (HILT) is one of the most powerful non-invasive treatment modalities available in physiotherapy today. At JK Physio, our Class 4 laser system delivers therapeutic laser energy deep into tissue — far beyond the reach of lower-class lasers — triggering profound cellular healing, reducing inflammation at its source, and providing rapid, lasting pain relief. It is particularly transformative for chronic pain conditions, disc pathologies, and sports injuries.`,
+      howItWorks: `The Class 4 laser emits high-powered photonic energy that penetrates through skin, fat, and muscle to reach deep structures including spinal discs, joint cartilage, and nerve roots. At the cellular level, this laser energy is absorbed by the mitochondria — the cell's energy centre — stimulating the production of ATP (adenosine triphosphate). This energises cells to repair, regenerate, and function at an accelerated rate.\n\nThe therapy also triggers a powerful anti-inflammatory cascade, reduces oxidative stress within damaged tissue, and stimulates the release of endogenous opioids for natural pain control. Unlike surgical lasers that cut, Class 4 therapeutic lasers deliver energy in a carefully calibrated, safe manner — the patient feels a gentle warmth, not discomfort.`,
+      conditions: [
+        'Disc herniation and sciatica',
+        'Chronic neck and back pain',
+        'Knee osteoarthritis',
+        'Plantar fasciitis and heel pain',
+        'Sports injuries (muscle tears, sprains)',
+        'Shoulder tendinopathy and rotator cuff injuries',
+        'Nerve damage and neuropathic pain',
+        'Post-surgical tissue healing',
+        'Wound healing and ulcers',
+        'Temporomandibular joint (TMJ) disorders',
+      ],
+      benefits: [
+        {
+          title: 'Deep Tissue Penetration',
+          desc: 'Reaches structures up to 10cm deep — including spinal discs and major joints — for targeted cellular therapy.',
+        },
+        {
+          title: 'Accelerated Healing',
+          desc: 'Stimulates mitochondrial ATP production to energise cells and dramatically speed tissue repair.',
+        },
+        {
+          title: 'Powerful Anti-Inflammatory',
+          desc: 'Reduces pro-inflammatory mediators at the cellular level for lasting relief from chronic inflammation.',
+        },
+        {
+          title: 'Drug-Free Pain Control',
+          desc: 'Triggers natural endorphin and opioid release for significant, sustained pain reduction without medication.',
+        },
+      ],
+      sessions: '6–15 sessions recommended',
+      duration: '10–25 minutes per session',
+    },
+  },
+  {
+    id: 'pulstar-spine-adjustment',
+    icon: '⚡',
+    faIcon: 'fas fa-bolt',
+    title: 'Pulstar Spine Adjustment',
+    shortDesc: 'Computer-guided, instrument-assisted spinal analysis and adjustment for precise, gentle, and measurable spinal correction.',
+    tag: 'Spine Correction',
+    color: '#db261d',
+    heroGradient: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 60%, #fff5f5 100%)',
+    detail: {
+      overview: `The Pulstar Spine Adjustment system is a breakthrough in computerised spinal analysis and treatment. Unlike traditional manual spinal manipulation, Pulstar uses an FDA-cleared, instrument-based approach that precisely identifies spinal segments with restricted mobility and delivers a controlled, repeatable impulse to restore normal movement. It is safe, gentle, highly accurate, and suitable for patients of all ages — including those who cannot tolerate conventional manipulation.`,
+      howItWorks: `The Pulstar device first performs a dynamic spinal analysis — gently tapping each vertebral segment and measuring its stiffness response in real time. A proprietary algorithm analyses the data and maps which spinal levels are hypomobile (restricted) and which are normal, producing an objective, colour-coded readout on the screen. This removes subjectivity from the assessment process.\n\nOnce the dysfunctional segments are identified, the device delivers a precise series of rapid, low-force impulses — faster than a manual adjustment and completely controlled by the computer. These impulses stimulate the mechanoreceptors in the joint, restore segmental mobility, reduce local muscle hypertonicity, and normalise nerve signalling from that spinal level. Post-treatment analysis confirms the correction has been achieved before the session ends.`,
+      conditions: [
+        'Spinal joint dysfunction and hypomobility',
+        'Cervical and lumbar spondylosis',
+        'Chronic neck and back stiffness',
+        'Headaches of cervicogenic origin',
+        'Postural imbalances and scoliosis management',
+        'Sacroiliac joint dysfunction',
+        'Disc-related spinal pain',
+        'Elderly patients requiring gentle adjustment',
+        'Post-surgical spinal care',
+        'Athletes requiring spinal performance optimisation',
+      ],
+      benefits: [
+        {
+          title: 'Objective Diagnosis',
+          desc: 'Computer analysis removes guesswork — precisely identifies which spinal segments need correction.',
+        },
+        {
+          title: 'Gentle and Safe',
+          desc: 'Instrument-delivered impulses are faster and gentler than manual manipulation — suitable for all ages.',
+        },
+        {
+          title: 'Measurable Results',
+          desc: 'Pre- and post-treatment scans confirm the correction was achieved at every session.',
+        },
+        {
+          title: 'Nerve Normalisation',
+          desc: 'Restores normal mechanoreceptor signalling from spinal joints, reducing referred pain and muscle spasm.',
+        },
+      ],
+      sessions: '8–16 sessions recommended',
+      duration: '20–35 minutes per session',
+    },
+  },
+  {
+    id: 'matrix-rhythm-therapy',
+    icon: '🌊',
+    faIcon: 'fas fa-wave-square',
+    title: 'Matrix Rhythm Therapy',
+    shortDesc: 'Resonance-based micro-vibration therapy for deep tissue restoration, lymphatic drainage, and cellular regeneration.',
+    tag: 'Cell Therapy',
+    color: '#db261d',
+    heroGradient: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 60%, #fff5f5 100%)',
+    detail: {
+      overview: `Matrix Rhythm Therapy (MaRhyThe) is a scientifically advanced treatment modality developed in Germany that works at the most fundamental level of the human body — the cell. Using a specialised resonance applicator, it delivers rhythmic micro-vibrations that mimic and synchronise with the natural oscillatory rhythm of healthy skeletal muscle cells (8–12 Hz). This normalises the extracellular matrix — the fluid-filled space surrounding every cell — restoring cellular nutrition, waste removal, and tissue function from the inside out.`,
+      howItWorks: `The Matrix Rhythm Therapy device uses a motor-driven applicator head that vibrates at precisely calibrated frequencies matching the body's own cellular rhythms. When applied to the skin over muscles, fascia, or joints, these micro-vibrations penetrate deep into the tissue, mechanically stimulating the extracellular matrix.\n\nIn injured or chronically tense tissue, the extracellular matrix becomes viscous and stagnant — cells can no longer receive nutrients or expel metabolic waste efficiently. Matrix Rhythm Therapy restores the fluid dynamics of this matrix through rhythmic mechanical stimulation, effectively re-opening the cellular communication channels. The result is improved microcirculation, accelerated lymphatic drainage, reduced tissue tension, and a profound restoration of normal cellular metabolism — the foundation of true tissue healing.`,
+      conditions: [
+        'Chronic muscle tension and myofascial pain',
+        'Lymphoedema and post-surgical swelling',
+        'Scar tissue and post-operative fibrosis',
+        'Complex Regional Pain Syndrome (CRPS)',
+        'Nerve regeneration support (neuropathy)',
+        'Sports injury recovery and muscle tears',
+        'Chronic fatigue and fibromyalgia',
+        'Frozen shoulder and joint stiffness',
+        'Diabetic foot and peripheral circulation problems',
+        'Post-fracture rehabilitation',
+      ],
+      benefits: [
+        {
+          title: 'Cellular-Level Healing',
+          desc: 'Works directly on the extracellular matrix to restore cellular nutrition, waste removal, and tissue metabolism.',
+        },
+        {
+          title: 'Deep Lymphatic Drainage',
+          desc: 'Stimulates lymphatic flow to reduce stubborn oedema and swelling at depth — without manual pressure.',
+        },
+        {
+          title: 'Scar and Fibrosis Reduction',
+          desc: 'Breaks down pathological scar tissue and adhesions, restoring normal tissue extensibility and function.',
+        },
+        {
+          title: 'Nerve Regeneration Support',
+          desc: 'Rhythmic vibration stimulates the regrowth and remyelination of damaged peripheral nerve fibres.',
+        },
+      ],
+      sessions: '8–20 sessions recommended',
+      duration: '30–50 minutes per session',
+    },
+  },
 ];
 
 /* ─── DETAIL PAGE ───────────────────────────────────── */
@@ -268,11 +299,18 @@ export const TechnologyDetail = () => {
 
   if (!tech) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-slate-500 mb-4">Technology not found.</p>
-          <button onClick={() => navigate('/technology')} className="text-brand font-semibold">
-            ← Back to Technology
+      <div className="min-h-screen flex items-center justify-center bg-slate-50 pt-40">
+        <div className="text-center p-10 bg-white rounded-2xl shadow-sm border border-slate-100 max-w-sm w-full mx-4" style={{ boxShadow: '0 10px 40px rgba(0,0,0,0.05)' }}>
+          <div className="w-16 h-16 bg-red-50 text-brand rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+            <i className="fas fa-search"></i>
+          </div>
+          <h2 className="text-xl font-bold text-slate-800 mb-2">Technology Not Found</h2>
+          <p className="text-slate-500 mb-8 text-sm leading-relaxed">We couldn't find the technology you're looking for. It may have been moved or removed.</p>
+          <button 
+            onClick={() => navigate('/technology')} 
+            className="w-full btn-primary bg-brand text-white font-semibold px-5 py-3 rounded-xl border-none cursor-pointer shadow-sm hover:shadow-md transition-shadow"
+          >
+            View All Technologies
           </button>
         </div>
       </div>
@@ -285,7 +323,7 @@ export const TechnologyDetail = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Banner */}
       <div
-        className="relative pt-28 pb-16 overflow-hidden"
+        className="relative pt-40 pb-16 overflow-hidden"
         style={{ background: tech.heroGradient }}
       >
         <div className="absolute inset-0 pointer-events-none">
@@ -297,17 +335,19 @@ export const TechnologyDetail = () => {
 
         <div className="max-w-screen-xl mx-auto px-6 relative">
           {/* Back button */}
-          <button
-            onClick={() => navigate('/technology')}
-            className="inline-flex items-center gap-2 text-sm font-semibold mb-8 bg-white/70 px-4 py-2 rounded-full border cursor-pointer"
-            style={{ color: '#db261d', borderColor: '#fecaca' }}
-          >
-            ← Back to Technology
-          </button>
+          <div className="flex items-center gap-4 mb-8">
+            <button
+              onClick={() => navigate('/technology')}
+              className="inline-flex items-center gap-2 text-sm font-semibold bg-white/70 px-4 py-2 rounded-full border cursor-pointer"
+              style={{ color: '#db261d', borderColor: '#fecaca' }}
+            >
+              ← Back to Technology
+            </button>
 
-          <div className="inline-block text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-5"
-            style={{ backgroundColor: '#fff1f1', color: '#db261d' }}>
-            {tech.tag}
+            <div className="inline-block text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full"
+              style={{ backgroundColor: '#fff1f1', color: '#db261d' }}>
+              {tech.tag}
+            </div>
           </div>
 
           <div className="flex items-start gap-6">
@@ -473,7 +513,7 @@ const TechnologyPage = () => {
 
       {/* Hero Banner */}
       <div
-        className="relative pt-28 pb-16 overflow-hidden"
+        className="relative pt-40 pb-16 overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #fff5f5 0%, #fee2e2 50%, #fff5f5 100%)' }}
       >
         <div className="absolute inset-0 pointer-events-none">
@@ -485,19 +525,21 @@ const TechnologyPage = () => {
 
         <div className="max-w-screen-xl mx-auto px-6 relative">
           {/* Back button */}
-          <button
-            onClick={() => navigate('/')}
-            className="inline-flex items-center gap-2 text-brand text-sm font-semibold mb-8 bg-white/70 px-4 py-2 rounded-full border border-red-100 cursor-pointer"
-          >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
-              <path d="M10 4L6 8l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            
-          </button>
+          <div className="flex items-center gap-4 mb-8">
+            <button
+              onClick={() => navigate('/')}
+              className="inline-flex items-center gap-2 text-brand text-sm font-semibold bg-white/70 px-4 py-2 rounded-full border border-red-100 cursor-pointer"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+                <path d="M10 4L6 8l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
 
-          <div className="inline-block text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-5"
-            style={{ backgroundColor: '#fff1f1', color: '#db261d' }}>
-            Advanced Equipment
+            </button>
+
+            <div className="inline-block text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full"
+              style={{ backgroundColor: '#fff1f1', color: '#db261d' }}>
+              Advanced Equipment
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 items-end">
@@ -511,7 +553,7 @@ const TechnologyPage = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-6 lg:justify-end">
-              {[['6+', 'Technologies'], ['10000+', 'Patients Treated'], ['16+', 'Years Experience']].map(([num, label]) => (
+              {[['6+', 'Technologies'], ['50000+', 'Patients Treated'], ['16+', 'Years Experience']].map(([num, label]) => (
                 <div key={label} className="text-center">
                   <div className="text-3xl font-bold text-slate-800">{num}</div>
                   <div className="text-xs text-slate-400 font-medium mt-0.5">{label}</div>
@@ -523,7 +565,7 @@ const TechnologyPage = () => {
       </div>
 
       {/* Technology Grid */}
-      <section className="py-20" style={{ background: '#0f0f0f' }}>
+      <section className="py-20 bg-white">
         <div className="max-w-screen-xl mx-auto px-6">
 
           <div className="text-center mb-14">
@@ -533,10 +575,10 @@ const TechnologyPage = () => {
             >
               Our Equipment
             </div>
-            <h2 className="text-3xl font-bold text-white">
+            <h2 className="text-3xl font-bold text-slate-800">
               Cutting-Edge Rehabilitation Technology
             </h2>
-            <p className="text-slate-400 mt-3 max-w-xl mx-auto text-sm leading-relaxed">
+            <p className="text-slate-500 mt-3 max-w-xl mx-auto text-sm leading-relaxed">
               Click on any technology to learn more about how it works, what conditions it treats, and its benefits.
             </p>
           </div>
@@ -555,26 +597,19 @@ const TechnologyPage = () => {
                   overflow: 'hidden',
                   cursor: 'pointer',
                   height: '280px',
-                  background: '#1a1a1a',
+                  background: tech.id === 'pulstar-spine-adjustment' ? 'linear-gradient(rgba(15,15,15,0.75), rgba(15,15,15,0.85)), url("/pulstar.jpg") center/contain no-repeat #fff' :
+                    tech.id === 'robotic-exoskeleton' ? 'linear-gradient(rgba(15,15,15,0.75), rgba(15,15,15,0.85)), url("/robotic-new.jpg") center/cover no-repeat' :
+                      tech.id === 'rymo-mobi-l' ? 'linear-gradient(rgba(15,15,15,0.75), rgba(15,15,15,0.85)), url("/rymo.png") center/cover no-repeat' :
+                        tech.id === 'dts-decompression' ? 'linear-gradient(rgba(15,15,15,0.75), rgba(15,15,15,0.85)), url("/dts.jpg") center/cover no-repeat' :
+                          tech.id === 'class-4-laser' ? 'linear-gradient(rgba(15,15,15,0.75), rgba(15,15,15,0.85)), url("/laser.jpg") center/cover no-repeat' : 
+                            tech.id === 'matrix-rhythm-therapy' ? 'linear-gradient(rgba(15,15,15,0.75), rgba(15,15,15,0.85)), url("/matrix.jpg") center/contain no-repeat #fff' : '#1a1a1a',
                   border: hoveredId === tech.id ? '1px solid rgba(219,38,29,0.4)' : '1px solid rgba(255,255,255,0.05)',
                   transition: 'border-color 0.3s, transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease',
                   transform: hoveredId === tech.id ? 'translateY(-8px)' : 'translateY(0)',
                   boxShadow: hoveredId === tech.id ? '0 24px 48px rgba(219,38,29,0.2)' : '0 4px 20px rgba(0,0,0,0.3)',
                 }}
               >
-                {/* Big icon background */}
-                <div style={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%)',
-                  fontSize: '8rem',
-                  opacity: hoveredId === tech.id ? 0.06 : 0.04,
-                  transition: 'opacity 0.3s',
-                  userSelect: 'none',
-                }}>
-                  {tech.icon}
-                </div>
+
 
                 {/* Gradient overlay */}
                 <div style={{
@@ -586,32 +621,10 @@ const TechnologyPage = () => {
                   transition: 'background 0.4s',
                 }} />
 
-                {/* Tag */}
-                <div style={{
-                  position: 'absolute',
-                  top: '20px',
-                  right: '20px',
-                  background: 'rgba(219,38,29,0.2)',
-                  color: '#fca5a5',
-                  border: '1px solid rgba(219,38,29,0.3)',
-                  borderRadius: '20px',
-                  padding: '4px 12px',
-                  fontSize: '0.65rem',
-                  fontWeight: '700',
-                  letterSpacing: '2px',
-                  textTransform: 'uppercase',
-                }}>
-                  {tech.tag}
-                </div>
 
                 {/* Content */}
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '24px' }}>
-                  <div style={{
-                    fontSize: '2rem',
-                    marginBottom: '8px',
-                  }}>
-                    {tech.icon}
-                  </div>
+
                   <div style={{
                     fontSize: '1.1rem',
                     fontWeight: '700',

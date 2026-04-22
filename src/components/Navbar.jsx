@@ -21,13 +21,21 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100' : 'bg-transparent'}`}>
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      {/* ✅ Changed: max-w-6xl → max-w-screen-2xl, px-6 → px-8 */}
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
 
         {/* Logo */}
-        <div className="flex items-center cursor-pointer" onClick={() => navigate('/')}>
-          <img src="/logo.png" alt="JK Physio" style={{ height: '100px', width: 'auto', objectFit: 'contain' }} />
+        <div className="flex items-center gap-3 cursor-pointer min-w-0" onClick={() => navigate('/')}>
+          <img src="/logo.png" alt="JK Physio" style={{ height: '130px', width: 'auto', objectFit: 'contain' }} />
+          <div className="flex flex-col leading-tight">
+            <span style={{ color: '#cc0000', fontWeight: '800', fontSize: '1.9rem', lineHeight: '1.1' }}>
+              Physiotherapy
+            </span>
+            <span style={{ color: '#1a1a1a', fontWeight: '700', fontSize: '1.7rem', lineHeight: '1.3' }}>
+              & Rehab Centre
+            </span>
+          </div>
         </div>
-
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6">
           <button onClick={() => { navigate('/'); setMenuOpen(false); }}
@@ -59,13 +67,13 @@ const Navbar = () => {
             Testimonials
           </button>
           <button onClick={() => { navigate('/'); setMenuOpen(false); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 300); }}
-            className="btn-primary bg-brand text-white font-bold px-5 py-3 rounded-xl mt-2 border-none cursor-pointer">
+            className="btn-primary bg-brand text-white text-sm font-semibold px-5 py-2.5 rounded-xl border-none cursor-pointer shadow-sm hover:shadow-md transition-shadow">
             Book Appointment
           </button>
         </div>
 
         {/* Mobile Hamburger */}
-        <button className="md:hidden p-2 bg-transparent border-none cursor-pointer" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+        <button className="md:hidden p-2 ml-auto bg-transparent border-none cursor-pointer" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
           <div style={{ display: 'block', width: '20px', height: '2px', backgroundColor: '#334155', marginBottom: '4px', transition: 'all 0.3s', transform: menuOpen ? 'rotate(45deg) translateY(6px)' : 'none' }}></div>
           <div style={{ display: 'block', width: '20px', height: '2px', backgroundColor: '#334155', marginBottom: '4px', opacity: menuOpen ? 0 : 1, transition: 'all 0.3s' }}></div>
           <div style={{ display: 'block', width: '20px', height: '2px', backgroundColor: '#334155', transition: 'all 0.3s', transform: menuOpen ? 'rotate(-45deg) translateY(-6px)' : 'none' }}></div>

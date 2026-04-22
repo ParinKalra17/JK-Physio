@@ -145,10 +145,10 @@ a:hover { opacity: 0.85; }
 
 /* ===== ICON HOVER WIGGLE ===== */
 .icon-hover {
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.3s ease;
 }
 .icon-hover:hover {
-  transform: rotate(-8deg) scale(1.15);
+  transform: scale(1.08);
 }
 
 /* ===== MAPS / CONTACT BUTTON HOVER ===== */
@@ -243,3 +243,20 @@ input:focus, select:focus, textarea:focus {
 .testi-track.rev:hover { animation-play-state: paused; }
 @keyframes tscroll  { from { transform: translateX(0); }    to { transform: translateX(-50%); } }
 @keyframes tscrollR { from { transform: translateX(-50%); } to { transform: translateX(0);    } }
+
+/* ===== HORIZONTAL SCROLLBAR FOR HOME PAGE ===== */
+.horizontal-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+.horizontal-scroll-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 999px;
+}
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+  background: #fca5a5;
+  border-radius: 999px;
+}
+.horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: var(--brand);
+}
+

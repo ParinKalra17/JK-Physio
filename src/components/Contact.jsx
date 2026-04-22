@@ -10,7 +10,7 @@ const services = [
 const contactInfo = [
   {
     icon: '📍',
-    label: 'Address',
+    label: 'Address  (Head Office)',
     value: 'Krishna Vatika, Opposite Brij Vihar, Near RK Circle, Pulla Bhuwana, Rupsagar, Udaipur, Rajasthan 313001',
   },
   {
@@ -53,6 +53,23 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const whatsappNumber = '919928981863'; // +91 99289 81863
+
+    const text =
+      `*New Appointment Request – JK Physiotherapy & Rehab*\n\n` +
+      `👤 *Name:* ${form.firstName} ${form.lastName}\n` +
+      `📞 *Phone:* ${form.phone}\n` +
+      `✉️ *Email:* ${form.email}\n` +
+      `🏥 *Service:* ${form.service || 'Not specified'}\n` +
+      `📝 *Message:* ${form.message || 'None'}\n\n` +
+      `_Sent from JK Physio website_`;
+
+    const encodedText = encodeURIComponent(text);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+
+    window.open(whatsappURL, '_blank');
+
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
     setForm({ firstName: '', lastName: '', phone: '', email: '', service: '', message: '' });
@@ -103,7 +120,7 @@ const Contact = () => {
 
             {submitted && (
               <div className="mb-4 p-4 bg-green-500/20 border border-green-500/30 rounded-xl text-green-300 text-sm font-medium">
-                ✅ Thank you! We'll confirm your appointment within 24 hours.
+                ✅ Request sent via WhatsApp! We'll confirm your appointment shortly.
               </div>
             )}
 
@@ -149,7 +166,7 @@ const Contact = () => {
                 type="submit"
                 className="btn-primary w-full bg-brand text-white font-semibold py-4 rounded-xl border-none cursor-pointer text-base"
               >
-                Request Appointment →
+                Request Appointment via WhatsApp →
               </button>
             </form>
           </div>
@@ -195,7 +212,7 @@ const Contact = () => {
                 <div className="text-white font-semibold text-sm">JK Physiotherapy & Rehab</div>
                 <div className="text-slate-400 text-xs mt-1">Krishna Vatika, Opposite Brij Vihar, Near RK Circle, Pulla Bhuwana, Rupsagar, Udaipur, Rajasthan 313001</div>
                 <a
-                  href="https://maps.google.com/?q=Jaipur+Rajasthan"
+                  href="https://maps.google.com/?q=Krishna+Vatika+Opposite+Brij+Vihar+Near+RK+Circle+Pulla+Bhuwana+Rupsagar+Udaipur+Rajasthan+313001"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-3 inline-block text-red-400 text-xs font-semibold underline"

@@ -39,25 +39,18 @@ const whyItems = [
   {
     num: '04',
     title: 'Proven, Measurable Outcomes',
-    desc: '98% recovery success rate across 10,000+ patients — not just promises, but transformation backed by clinical data.',
+    desc: '98% recovery success rate across 50,000+ patients — not just promises, but transformation backed by clinical data.',
   },
 ];
 
 const stats = [
-  { icon: 'fas fa-users', id: 'st1', target: 10000, suffix: '+', label: 'Patients Treated' },
-  { icon: 'fas fa-chart-line', id: 'st2', target: 98, suffix: '%', label: 'Recovery Success Rate', gold: true },
+  { icon: 'fas fa-users', id: 'st1', target: 50000, suffix: '+', label: 'Patients Treated' },
+  { icon: 'fas fa-chart-line', id: 'st2', target: 14, suffix: '+', label: 'Branches' },
   { icon: 'fas fa-trophy', id: 'st3', target: 15, suffix: '+', label: 'Years Experience' },
   { icon: 'fas fa-map-marker-alt', id: 'st4', target: 4, suffix: '+', label: 'City Branches' },
 ];
 
-const machines = [
-  { icon: 'fas fa-bolt', title: 'IFT & Ultrasound Therapy', desc: 'Deep tissue healing using interferential current and high-frequency sound waves to reduce inflammation and accelerate tissue repair.' },
-  { icon: 'fas fa-microchip', title: 'FES & TENS Therapy', desc: 'Functional electrical stimulation and transcutaneous nerve stimulation for neurological recovery and pain management.' },
-  { icon: 'fas fa-walking', title: 'Gait Trainer System', desc: 'Robotic-assisted gait retraining for patients with mobility impairments, enabling safe and progressive walking rehabilitation.' },
-  { icon: 'fas fa-sun', title: 'Laser Therapy', desc: 'Low-level laser therapy (LLLT) promotes cellular regeneration, reduces swelling, and fast-tracks recovery from injuries.' },
-  { icon: 'fas fa-arrows-alt-v', title: 'Spinal Decompression', desc: 'Motorised traction to decompress the spine, relieve nerve impingement, and treat herniated discs non-surgically.' },
-  { icon: 'fas fa-dumbbell', title: 'Therapeutic Gym', desc: 'State-of-the-art gym with therapeutic supervision for strength building and complete fitness transformation.' },
-];
+
 
 const marqueeItems = [
   'Paralysis Rehabilitation', 'Stroke Recovery', 'Back Pain Relief',
@@ -106,8 +99,7 @@ const AboutPage = () => {
 
   return (
     <>
-      {/* ── FONTS & ICONS ── */}
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+      {/* ── ICONS ── */}
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
       <style>{`
@@ -128,7 +120,7 @@ const AboutPage = () => {
           --bdr:   #E5E7EB;
           --ease:  cubic-bezier(.19,1,.22,1);
         }
-        .about-page { font-family:'Poppins',sans-serif; color:var(--txt); overflow-x:hidden; }
+        .about-page { color:var(--txt); overflow-x:hidden; }
         .about-page * { box-sizing:border-box; }
 
         /* ── SCROLL REVEAL ── */
@@ -148,17 +140,16 @@ const AboutPage = () => {
         }
         .sec-label .ln { width:24px; height:2px; background:var(--red); flex-shrink:0; }
         .sec-h2 {
-          font-family:'Playfair Display',serif;
           font-size:clamp(2rem,4vw,3.2rem);
           font-weight:700; line-height:1.15; letter-spacing:-.5px; color:var(--dark);
         }
-        .sec-h2 span { color:var(--red); font-style:italic; }
+        .sec-h2 span { color:var(--red); }
         .sec-p { font-size:.95rem; font-weight:300; color:var(--txt2); line-height:1.9; margin-top:14px; }
 
         /* ── HERO ── */
         .ab-hero {
           background: linear-gradient(135deg,#0F0F0F 0%,#1a0609 100%);
-          padding: 120px 5% 80px; position:relative; overflow:hidden;
+          padding: 180px 5% 80px; position:relative; overflow:hidden;
         }
         .ab-hero::before {
           content:''; position:absolute; top:-80px; right:-80px;
@@ -179,14 +170,13 @@ const AboutPage = () => {
         }
         .ab-eyebrow .dot { width:6px; height:6px; border-radius:50%; background:var(--red); }
         .ab-hero h1 {
-          font-family:'Playfair Display',serif;
           font-size:clamp(2.6rem,5vw,4.8rem); font-weight:700;
           color:#fff; line-height:1.1; letter-spacing:-.5px;
         }
-        .ab-hero h1 span { color:var(--red); font-style:italic; }
+        .ab-hero h1 span { color:var(--red); }
         .ab-hero p { font-size:1rem; font-weight:300; color:rgba(255,255,255,.6); line-height:1.8; max-width:560px; margin:20px 0 0; }
         .ab-stats { display:flex; flex-wrap:wrap; gap:40px 60px; margin-top:60px; padding-top:50px; border-top:1px solid rgba(255,255,255,.08); }
-        .ab-stat-num { font-family:'Playfair Display',serif; font-size:2.4rem; font-weight:700; color:#fff; }
+        .ab-stat-num { font-size:2.4rem; font-weight:700; color:#fff; }
         .ab-stat-lbl { font-size:.7rem; font-weight:400; color:rgba(255,255,255,.4); letter-spacing:2px; text-transform:uppercase; margin-top:2px; }
 
         /* ── MARQUEE ── */
@@ -205,12 +195,12 @@ const AboutPage = () => {
         }
         .who-img-wrap:hover .who-img { transform:scale(1.04); }
         .who-img { width:100%; height:100%; object-fit:cover; object-position:top center; transition:transform .6s; display:block; }
-        .who-img-placeholder {
+        
           width:100%; height:100%; display:flex; align-items:center; justify-content:center;
           background:linear-gradient(135deg,#f9f0f1,#fff5f6);
           font-size:4rem; color:var(--red); opacity:.3;
         }
-        .play-btn {
+        .{
           position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
           width:72px; height:72px; border-radius:50%; background:var(--red);
           display:flex; align-items:center; justify-content:center;
@@ -218,9 +208,9 @@ const AboutPage = () => {
           box-shadow:0 0 0 0 rgba(200,0,30,.5);
           animation:playP 2.5s infinite; transition:transform .3s;
         }
-        .who-img-wrap:hover .play-btn { transform:translate(-50%,-50%) scale(1.1); }
+        .who-img-wrap:hover .{ transform:translate(-50%,-50%) scale(1.1); }
         @keyframes playP { 0%,100%{box-shadow:0 0 0 0 rgba(200,0,30,.5)} 70%{box-shadow:0 0 0 22px rgba(200,0,30,0)} }
-        .vid-badge {
+        . {
           position:absolute; top:20px; left:20px;
           background:rgba(10,10,10,.75); backdrop-filter:blur(10px);
           color:#fff; padding:8px 16px; border-radius:4px;
@@ -228,7 +218,6 @@ const AboutPage = () => {
           border-left:3px solid var(--red);
         }
         .who-quote {
-          font-family:'Playfair Display',serif;
           font-size:1.35rem; font-style:italic; font-weight:400;
           color:var(--txt2); line-height:1.6;
           border-left:3px solid var(--red); padding-left:24px;
@@ -270,7 +259,7 @@ const AboutPage = () => {
           background:var(--red); color:#fff; border-radius:8px; padding:22px 26px;
           text-align:center; box-shadow:0 12px 40px rgba(200,0,30,.35);
         }
-        .wf-num { font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:700; }
+        .wf-num { font-size:2.2rem; font-weight:700; }
         .wf-text { font-size:.68rem; font-weight:500; letter-spacing:2px; text-transform:uppercase; opacity:.8; margin-top:4px; }
         .why-item {
           display:flex; gap:20px; align-items:flex-start;
@@ -278,7 +267,7 @@ const AboutPage = () => {
           margin-bottom:12px; transition:all .35s;
         }
         .why-item:hover { border-color:var(--red-m); background:var(--red-l); }
-        .wyi-num { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:700; color:rgba(200,0,30,.18); flex-shrink:0; line-height:1; }
+        .wyi-num { font-size:1.8rem; font-weight:700; color:rgba(200,0,30,.18); flex-shrink:0; line-height:1; }
         .wyi-title { font-size:.9rem; font-weight:700; color:var(--txt); margin-bottom:4px; }
         .wyi-desc  { font-size:.78rem; font-weight:300; color:var(--txt3); line-height:1.55; }
 
@@ -293,7 +282,6 @@ const AboutPage = () => {
         }
         .stat-box:last-child { border-right:none; }
         .stat-n {
-          font-family:'Playfair Display',serif;
           font-size:3.2rem; font-weight:700; color:#fff; line-height:1;
         }
         .stat-n .plus { font-size:2rem; color:var(--red); }
@@ -339,7 +327,7 @@ const AboutPage = () => {
           display:inline-flex; align-items:center; gap:10px;
           font-size:.78rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
           padding:14px 32px; background:var(--red); color:#fff; border-radius:4px;
-          border:none; cursor:pointer; transition:all .35s; font-family:'Poppins',sans-serif;
+          border:none; cursor:pointer; transition:all .35s;
           border:2px solid var(--red); text-decoration:none;
         }
         .btn-red:hover { background:var(--dark); border-color:var(--dark); box-shadow:0 8px 28px rgba(0,0,0,.2); }
@@ -348,7 +336,7 @@ const AboutPage = () => {
           font-size:.78rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
           padding:14px 32px; background:transparent; color:var(--red);
           border:2px solid var(--red); border-radius:4px; cursor:pointer;
-          transition:all .35s; font-family:'Poppins',sans-serif; text-decoration:none;
+          transition:all .35s; text-decoration:none;
         }
         .btn-outline:hover { background:var(--red); color:#fff; }
 
@@ -363,8 +351,8 @@ const AboutPage = () => {
           width:500px; height:500px; border-radius:50%;
           background:radial-gradient(circle,rgba(200,0,30,.1),transparent 70%);
         }
-        .cta-title { font-family:'Playfair Display',serif; font-size:2.6rem; font-weight:700; color:#fff; line-height:1.2; }
-        .cta-title span { color:var(--red); font-style:italic; }
+        .cta-title { font-size:2.6rem; font-weight:700; color:#fff; line-height:1.2; }
+        .cta-title span { color:var(--red); }
         .cta-sub { font-size:.95rem; font-weight:300; color:rgba(255,255,255,.45); margin-top:12px; line-height:1.8; max-width:480px; }
         .cta-btns { display:flex; gap:14px; flex-wrap:wrap; position:relative; z-index:1; }
 
@@ -401,7 +389,7 @@ const AboutPage = () => {
               Learn about our mission, philosophy, and the team behind JK Physiotherapy &amp; Rehab — Rajasthan's most trusted rehabilitation centre.
             </p>
             <div className="ab-stats" data-sr="up" style={{ transitionDelay: '.35s' }}>
-              {[['15+', 'Years of Excellence'], ['80+', 'Specialist Therapists'], ['10,000+', 'Lives Changed'], ['98%', 'Success Rate']].map(([n, l]) => (
+              {[['15+', 'Years of Excellence'], ['100+', 'Specialist Therapists'], ['10,000+', 'Lives Changed'], ['98%', 'Success Rate']].map(([n, l]) => (
                 <div key={l}>
                   <div className="ab-stat-num">{n}</div>
                   <div className="ab-stat-lbl">{l}</div>
@@ -421,25 +409,37 @@ const AboutPage = () => {
         </div>
 
         {/* ── WHO WE ARE ── */}
-        <section className="ap-sec" style={{ background: '#fff' }}>
-          <div className="who-grid" style={{ maxWidth: 1200, margin: '0 auto' }}>
-            {/* Left – image */}
-            <div data-sr="left">
-              <div className="who-img-wrap">
-                <div className="who-img-placeholder">
-                  <i className="fas fa-user-md" />
-                </div>
-                <div className="vid-badge">▶ Watch Our Story</div>
-                <div className="play-btn">
-                  <i className="fas fa-play" style={{ marginLeft: 3 }} />
-                </div>
-              </div>
-            </div>
-
+<section className="ap-sec" style={{ background: '#fff' }}>
+  <div className="who-grid" style={{ maxWidth: 1200, margin: '0 auto' }}>
+    {/* Left – video */}
+    <div
+      className="who-img-wrap"
+      style={{
+        background: '#000',
+        aspectRatio: '9 / 16',       /* matches the video exactly */
+        width: '100%',
+        maxWidth: '380px',           /* keeps portrait from getting too wide */
+        margin: '0 auto',
+        borderRadius: '8px',
+        overflow: 'hidden',
+      }}
+    >
+      <video
+        src="/awareness.mp4"
+        controls
+        playsInline
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          display: 'block',
+        }}
+      />
+    </div>
             {/* Right – content */}
             <div data-sr="right">
               <div className="sec-label"><span className="ln" />Who Are We?</div>
-              <h2 className="sec-h2">JK Physio &amp; Rehab —<br /><span>Transforming Lives</span> Since 2008</h2>
+              <h2 className="sec-h2">JK Physio &amp; Rehab —<br /><span>Transforming Lives</span> Since 2011</h2>
               <blockquote className="who-quote">
                 "Every patient who walks through our doors carries a story. Our mission is to help them write a better chapter."
                 <small style={{ fontSize: '.75rem', fontStyle: 'normal', color: 'var(--txt3)', marginTop: 8, display: 'block' }}>— Dr. Piyush Devpura, Founder</small>
@@ -466,66 +466,72 @@ const AboutPage = () => {
         </section>
 
         {/* ── WHY CHOOSE US ── */}
-<section className="ap-sec" style={{ background:'var(--off)' }}>
-  <div className="why-grid" style={{ maxWidth:1200, margin:'0 auto' }}>
+        <section className="ap-sec" style={{ background: 'var(--off)' }}>
+          <div className="why-grid" style={{ maxWidth: 1200, margin: '0 auto' }}>
 
-    {/* Left – doctor photo */}
-    <div data-sr="left" style={{ position:'relative', paddingBottom:32, paddingRight:32 }}>
-      {/* Red corner accent */}
-      <div style={{
-        position:'absolute', top:-16, left:-16,
-        width:100, height:100, zIndex:0,
-        border:'2px solid #C8001E', borderRadius:4, opacity:.2,
-      }} />
+            {/* Left – doctor photo */}
+            <div data-sr="left" style={{ position: 'relative', paddingBottom: 32, paddingRight: 32 }}>
 
-      <img  src="/dr-piyush.jpeg"
-      alt="Dr. Piyush Devpura"
-      style={{
-    position:'relative', zIndex:1,
-    width:'100%', display:'block',
-    borderRadius:'8px',
-    objectFit:'cover',
-    objectPosition:'top center',
-    aspectRatio:'3/4',
-    boxShadow:'0 20px 60px rgba(0,0,0,0.15)',
-  }}
-/>
 
-      {/* Floating badge */}
-      <div style={{
-        position:'absolute', bottom:-24, right:-24, zIndex:2,
-        background:'#C8001E', color:'#fff',
-        borderRadius:'8px', padding:'22px 26px',
-        textAlign:'center',
-        boxShadow:'0 12px 40px rgba(200,0,30,.35)',
-      }}>
-        <div style={{ fontFamily:"'Playfair Display',serif", fontSize:'2.2rem', fontWeight:700 }}>16+</div>
-        <div style={{ fontSize:'.68rem', fontWeight:500, letterSpacing:'2px', textTransform:'uppercase', opacity:.8, marginTop:4 }}>
-          Years of<br />Excellence
-        </div>
-      </div>
-    </div>
+              <img src="/dr-piyush.jpeg"
+                alt="Dr. Piyush Devpura"
+                style={{
+                  position: 'relative', zIndex: 1,
+                  width: '100%', display: 'block',
+                  borderRadius: '8px',
+                  objectFit: 'cover',
+                  objectPosition: 'top center',
+                  aspectRatio: '3/4',
+                  boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
+                }}
+              />
 
-    {/* Right – numbered list */}
-    <div data-sr="right">
-      <div className="sec-label"><span className="ln" />Why Choose Us?</div>
-      <h2 className="sec-h2">Your Ultimate Partner<br />in <span>Recovery</span></h2>
-      <p className="sec-p" style={{ marginBottom:32 }}>
-        Your success in rehabilitation depends on choosing the right partner. Here's why thousands trust JK Physio.
-      </p>
-      {whyItems.map(item => (
-        <div className="why-item" key={item.num}>
-          <div className="wyi-num">{item.num}</div>
-          <div>
-            <div className="wyi-title">{item.title}</div>
-            <div className="wyi-desc">{item.desc}</div>
+              {/* Name Tag */}
+              <div style={{
+                position: 'absolute', top: 20, left: 20, zIndex: 2,
+                background: 'rgba(10,10,10,.75)', backdropFilter: 'blur(10px)',
+                color: '#fff', padding: '8px 16px', borderRadius: '4px',
+                fontSize: '.7rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase',
+                borderLeft: '3px solid #C8001E'
+              }}>
+                Dr. Piyush Devpura
+              </div>
+
+              {/* Floating badge */}
+              <div style={{
+                position: 'absolute', bottom: -24, right: -24, zIndex: 2,
+                background: '#C8001E', color: '#fff',
+                borderRadius: '8px', padding: '22px 26px',
+                textAlign: 'center',
+                boxShadow: '0 12px 40px rgba(200,0,30,.35)',
+              }}>
+                <div style={{ fontSize: '2.2rem', fontWeight: 700 }}>16+</div>
+                <div style={{ fontSize: '.68rem', fontWeight: 500, letterSpacing: '2px', textTransform: 'uppercase', opacity: .8, marginTop: 4 }}>
+                  Years of<br />Excellence
+                </div>
+              </div>
+            </div>
+
+            {/* Right – numbered list */}
+            <div data-sr="right">
+              <div className="sec-label"><span className="ln" />Why Choose Us?</div>
+              <h2 className="sec-h2">Your Ultimate Partner<br />in <span>Recovery</span></h2>
+              <p className="sec-p" style={{ marginBottom: 32 }}>
+                Your success in rehabilitation depends on choosing the right partner. Here's why thousands trust JK Physio.
+              </p>
+              {whyItems.map(item => (
+                <div className="why-item" key={item.num}>
+                  <div className="wyi-num">{item.num}</div>
+                  <div>
+                    <div className="wyi-title">{item.title}</div>
+                    <div className="wyi-desc">{item.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
           </div>
-        </div>
-      ))}
-    </div>
-
-  </div>
-</section>
+        </section>
 
         {/* ── STATS DARK ── */}
         <section className="stats-dark" ref={statsRef}>
@@ -540,36 +546,6 @@ const AboutPage = () => {
                 <div className="stat-l">{s.label}</div>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* ── TECHNOLOGY / EQUIPMENT ── */}
-        <section className="ap-sec" style={{ background: 'var(--off)' }}>
-          <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'end', marginBottom: 60 }}>
-              <div data-sr="left">
-                <div className="sec-label"><span className="ln" />Advanced Technology</div>
-                <h2 className="sec-h2">World-Class <span>Equipment</span></h2>
-              </div>
-              <p className="sec-p" data-sr="right">
-                Our clinic is equipped with cutting-edge physiotherapy technology — making JK Physio the most technologically advanced rehabilitation centre in Rajasthan.
-              </p>
-            </div>
-
-            <div className="spec-grid">
-              {machines.map((m, i) => (
-                <div className="spec-card" key={m.title} data-sr="zoom" style={{ transitionDelay: `${0.05 * (i + 1)}s` }}>
-                  <div className="spec-bg" />
-                  <div className="spec-overlay" />
-                  <i className={`${m.icon} spec-icon-bg`} />
-                  <div className="spec-body">
-                    <div className="spec-title">{m.title}</div>
-                    <div style={{ fontSize: '.75rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.5, marginBottom: 8 }}>{m.desc}</div>
-                    <div className="spec-link"><i className="fas fa-arrow-right" /> Learn More</div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 

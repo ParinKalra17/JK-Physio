@@ -144,21 +144,20 @@ const TestimonialsPage = () => {
   return (
     <div style={{ minHeight: '100vh', background: '#FAFAFA', fontFamily: "'Montesserat" }}>
 
-      {/* ── Hero ─────────────────────────────────────────────── */}
-      <div style={{ padding: '100px 5% 60px' }}>
-
-       {/* Back button */}
-          <button
-            onClick={() => navigate('/')}
-            className="inline-flex items-center gap-2 text-brand text-sm font-semibold mb-8 bg-white/70 px-4 py-2 rounded-full border border-red-100 cursor-pointer"
-          >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
-              <path d="M10 4L6 8l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            
-          
-    
+      {/* Back button */}
+      <div className="max-w-screen-xl mx-auto px-12 pt-40 pb-4">
+        <button
+          onClick={() => navigate('/')}
+          className="inline-flex items-center gap-2 text-brand text-sm font-semibold bg-white/70 px-4 py-2 rounded-full border border-red-100 cursor-pointer"
+        >
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+            <path d="M10 4L6 8l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
         </button>
+      </div>
+
+      {/* ── Hero ─────────────────────────────────────────────── */}
+      <div style={{ padding: '0 5% 60px' }}>
 
         {/* Split heading */}
         <div style={{
@@ -208,7 +207,7 @@ const TestimonialsPage = () => {
               display: 'flex', flexWrap: 'wrap', gap: '36px',
               paddingTop: '24px', borderTop: '1px solid #E5E7EB',
             }}>
-              {[['10000+', 'Patients Treated'], ['95%', 'Recovery Rate'], ['4.9 ★', 'Avg Rating'], ['16+', 'Years Experience']].map(([num, label]) => (
+              {[['50000+', 'Patients Treated'], ['95%', 'Recovery Rate'], ['4.9 ★', 'Avg Rating'], ['16+', 'Years Experience']].map(([num, label]) => (
                 <div key={label}>
                   <div style={{ fontFamily: "'Montesserat", fontSize: '1.8rem', fontWeight: 700, color: '#0F0F0F', lineHeight: 1 }}>
                     {num}
