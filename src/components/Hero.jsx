@@ -14,7 +14,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="hero-gradient mesh-bg min-h-screen flex items-center pt-40 relative overflow-hidden">
+    <section id="home" className="hero-gradient mesh-bg min-h-screen flex items-center pt-24 lg:pt-40 relative overflow-hidden">
       {/* Background blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-20 -right-20 w-96 h-96 bg-red-200/30 rounded-full blur-3xl pulse-ring"></div>
