@@ -421,7 +421,7 @@ const Branches = ({ onHomePage = false }) => {
       {/* Branch Cards */}
       <section className="py-20" ref={sectionRef}>
         {/* ✅ CHANGED: max-w-6xl px-6 → max-w-screen-xl px-12 */}
-        <div className="max-w-screen-xl mx-auto px-12">
+        <div className="max-w-screen-xl mx-auto px-4 md:px-12">
 
           <div className={`flex flex-wrap gap-3 justify-center mb-14 fade-up ${visible ? 'visible' : ''}`}>
             {branches.filter((b) => !b.udaipurExtra && !b.bhilwaraExtra && !b.ahmedabadExtra).map((b) => (
@@ -448,7 +448,7 @@ const Branches = ({ onHomePage = false }) => {
             {visibleBranches.map((branch, i) => (
               <div 
                 key={branch.id} 
-                className={onHomePage ? "flex-shrink-0 snap-start" : ""} 
+                className={onHomePage ? "flex-shrink-0 snap-center mx-auto" : ""} 
                 style={onHomePage ? { width: '380px', maxWidth: '85vw' } : {}}
               >
                 <BranchCard
