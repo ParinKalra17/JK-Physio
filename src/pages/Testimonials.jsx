@@ -181,14 +181,13 @@ const TestimonialsPage = () => {
 
             {/* sec-h2 */}
             <h1 style={{
-              fontFamily: "'Montesserat",
               fontSize: 'clamp(2rem, 4vw, 3.8rem)',
               fontWeight: 700, lineHeight: 1.1,
               letterSpacing: '-.5px', color: '#0F0F0F',
               margin: 0,
             }}>
               What Our{' '}
-              <span style={{ color: '#C8001E', fontStyle: 'Montesserat' }}>Patients Say</span>
+              <span style={{ color: '#C8001E' }}>Patients Say</span>
             </h1>
           </div>
 
@@ -209,7 +208,7 @@ const TestimonialsPage = () => {
             }}>
               {[['50000+', 'Patients Treated'], ['95%', 'Recovery Rate'], ['4.9 ★', 'Avg Rating'], ['16+', 'Years Experience']].map(([num, label]) => (
                 <div key={label}>
-                  <div style={{ fontFamily: "'Montesserat", fontSize: '1.8rem', fontWeight: 700, color: '#0F0F0F', lineHeight: 1 }}>
+                  <div style={{ fontSize: '1.8rem', fontWeight: 700, color: '#0F0F0F', lineHeight: 1 }}>
                     {num}
                   </div>
                   <div style={{ fontSize: '.68rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', color: '#888', marginTop: '4px' }}>
@@ -268,12 +267,11 @@ const TestimonialsPage = () => {
                 Start Your Journey
               </div>
               <h3 style={{
-                fontFamily: "'Montesserat",
                 fontSize: 'clamp(1.8rem, 3vw, 2.8rem)',
                 fontWeight: 700, color: '#fff', lineHeight: 1.2, margin: '0 0 12px',
               }}>
                 Ready to Write Your<br />
-                <span style={{ color: '#C8001E', fontStyle: 'Montesserat' }}>Success Story?</span>
+                <span style={{ color: '#C8001E' }}>Success Story?</span>
               </h3>
               <p style={{ fontSize: '1rem', fontWeight: 300, color: 'rgba(255,255,255,.55)', lineHeight: 1.8, maxWidth: '500px' }}>
                 Join thousands of patients who have restored their movement and reclaimed their lives across our 6 branches.

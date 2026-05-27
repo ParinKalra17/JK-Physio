@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const isAboutPage = location.pathname === '/about';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -20,18 +22,18 @@ const Navbar = () => {
   const goToTestimonials = () => { navigate('/testimonials'); setMenuOpen(false); };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isAboutPage ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100' : 'bg-transparent'}`}>
       {/* ✅ Changed: max-w-6xl → max-w-screen-2xl, px-6 → px-8 */}
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
 
         {/* Logo */}
-        <div className="flex items-center gap-3 cursor-pointer min-w-0" onClick={() => navigate('/')}>
-          <img src="/logo.png" alt="JK Physio" style={{ height: '130px', width: 'auto', objectFit: 'contain' }} />
+        <div className="flex items-center gap-2 md:gap-3 cursor-pointer min-w-0" onClick={() => navigate('/')}>
+          <img src="/logo.png" alt="JK Physio" className="h-[90px] md:h-[130px] w-auto object-contain" />
           <div className="flex flex-col leading-tight">
-            <span style={{ color: '#cc0000', fontWeight: '800', fontSize: '1.9rem', lineHeight: '1.1' }}>
+            <span className="text-[#cc0000] font-extrabold text-[1.4rem] md:text-[1.9rem] leading-[1.1]">
               Physiotherapy
             </span>
-            <span style={{ color: '#1a1a1a', fontWeight: '700', fontSize: '1.7rem', lineHeight: '1.3' }}>
+            <span className="text-[#1a1a1a] font-bold text-[1.25rem] md:text-[1.7rem] leading-[1.3]">
               & Rehab Centre
             </span>
           </div>

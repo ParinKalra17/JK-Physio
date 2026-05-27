@@ -13,12 +13,18 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4 cursor-pointer" onClick={() => scrollTo('home')}>
               <div>
-                  <img src="/Footerlogo.png" alt="JK Physio" style={{ height: '52px', width: 'auto', objectFit: 'contain' }} />
+                  <img src="/Footerlogo.png" alt="JK Physio" style={{ height: '80px', width: 'auto', objectFit: 'contain' }} />
               </div>
             </div>
-            <p className="text-slate-400 text-sm leading-relaxed">
+            <p className="text-slate-400 text-sm leading-relaxed mb-4">
               Most Advanced Physiotherapy centre.
             </p>
+            <button 
+              onClick={() => navigate('/branches')}
+              className="text-red-500 hover:text-red-400 text-sm font-semibold transition-colors bg-transparent border-none cursor-pointer p-0 underline text-left"
+            >
+              Visit your nearest JK Physio centre
+            </button>
           </div>
 
           {/* Quick Links */}

@@ -116,9 +116,9 @@ const ServicesPage = () => {
 
           {/* Stats */}
           <div className="flex flex-wrap gap-10 mt-10 pt-8 border-t" style={{ borderColor: '#fecaca' }}>
-            {[['5+', 'Specialties'], ['50000+', 'Patients Treated'], ['16+', 'Years Experience'], ['98%', 'Success Rate']].map(([num, label]) => (
+            {[['5+', 'Specialities'], ['50000+', 'Patients Treated'], ['16+', 'Years Experience'], ['98%', 'Success Rate']].map(([num, label]) => (
               <div key={label}>
-                <div className="text-2xl font-bold text-slate-800" style={{ fontFamily: "'Montesserat" }}>{num}</div>
+                <div className="text-2xl font-bold text-slate-800">{num}</div>
                 <div className="text-xs text-slate-400 font-medium mt-0.5">{label}</div>
               </div>
             ))}

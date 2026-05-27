@@ -175,9 +175,16 @@ const AboutPage = () => {
         }
         .ab-hero h1 span { color:var(--red); }
         .ab-hero p { font-size:1rem; font-weight:300; color:rgba(255,255,255,.6); line-height:1.8; max-width:560px; margin:20px 0 0; }
-        .ab-stats { display:flex; flex-wrap:wrap; gap:40px 60px; margin-top:60px; padding-top:50px; border-top:1px solid rgba(255,255,255,.08); }
+        .ab-stats {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 40px 30px;
+          margin-top: 60px;
+          padding-top: 50px;
+          border-top: 1px solid rgba(255,255,255,.08);
+        }
         .ab-stat-num { font-size:2.4rem; font-weight:700; color:#fff; }
-        .ab-stat-lbl { font-size:.7rem; font-weight:400; color:rgba(255,255,255,.4); letter-spacing:2px; text-transform:uppercase; margin-top:2px; }
+        .ab-stat-lbl { font-size:.7rem; font-weight:400; color:rgba(255,255,255,.4); letter-spacing:2px; text-transform:uppercase; margin-top:8px; }
 
         /* ── MARQUEE ── */
         .mq-band { background:var(--red); overflow:hidden; padding:15px 0; }
@@ -389,7 +396,7 @@ const AboutPage = () => {
               Learn about our mission, philosophy, and the team behind JK Physiotherapy &amp; Rehab — Rajasthan's most trusted rehabilitation centre.
             </p>
             <div className="ab-stats" data-sr="up" style={{ transitionDelay: '.35s' }}>
-              {[['15+', 'Years of Excellence'], ['100+', 'Specialist Therapists'], ['10,000+', 'Lives Changed'], ['98%', 'Success Rate']].map(([n, l]) => (
+              {[['16+', 'Years of Excellence'], ['100+', 'Specialist Therapists'], ['50,000+', 'Lives Changed'], ['98%', 'Success Rate']].map(([n, l]) => (
                 <div key={l}>
                   <div className="ab-stat-num">{n}</div>
                   <div className="ab-stat-lbl">{l}</div>

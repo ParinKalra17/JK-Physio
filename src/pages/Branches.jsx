@@ -21,6 +21,7 @@ const branches = [
     isMain: true,
     udaipurExtra: false,
     bhilwaraExtra: false,
+    ahmedabadExtra: false,
   },
   {
     id: 11,
@@ -41,6 +42,7 @@ const branches = [
     isMain: false,
     udaipurExtra: true,
     bhilwaraExtra: false,
+    ahmedabadExtra: false,
   },
   {
     id: 12,
@@ -61,6 +63,7 @@ const branches = [
     isMain: false,
     udaipurExtra: true,
     bhilwaraExtra: false,
+    ahmedabadExtra: false,
   },
   {
     id: 2,
@@ -68,7 +71,7 @@ const branches = [
     city: 'Bhilwara',
     state: 'Rajasthan',
     address: 'K.P Tower, 2nd Floor, Near Mewar Hospital, R.C. Vyas Colony, Bhilwara, Rajasthan',
-    phone: '+91 99289 81863',
+    phone: '+91 79765 00688',
     hours: [
       { days: 'Mon – Sat', time: '8:00 AM – 7:00 PM' },
       { days: 'Sunday', time: 'Closed' },
@@ -81,6 +84,7 @@ const branches = [
     isMain: false,
     udaipurExtra: false,
     bhilwaraExtra: false,
+    ahmedabadExtra: false,
   },
   {
     id: 21,
@@ -88,39 +92,20 @@ const branches = [
     city: 'Bhilwara',
     state: 'Rajasthan',
     address: 'Keshav Porwal Hospital, R C Vyas Colony, Bhilwara, Rajasthan',
-    phone: '+91 99289 81863',
+    phone: '+91 79765 00688',
     hours: [
       { days: 'Mon – Sat', time: '8:00 AM – 7:00 PM' },
       { days: 'Sunday', time: 'Closed' },
     ],
     mapQuery: 'Keshav+Porwal+Hospital+R+C+Vyas+Colony+Bhilwara+Rajasthan',
-    color: '#dc2626',
+    color: '#000000',
     badge: 'Branch',
-    badgeColor: '#dc2626',
+    badgeColor: '#000000',
     landmark: 'Keshav Porwal Hospital, R C Vyas Colony',
     isMain: false,
     udaipurExtra: false,
     bhilwaraExtra: true,
-  },
-  {
-    id: 3,
-    name: 'JK Physio — Chittorgarh',
-    city: 'Chittorgarh',
-    state: 'Rajasthan',
-    address: 'MES Hospital, 3rd Floor, Sector 5, Gandhi Nagar, Chittorgarh, Rajasthan',
-    phone: '+91 99289 81863',
-    hours: [
-      { days: 'Mon – Sat', time: '9:00 AM – 7:00 PM' },
-      { days: 'Sunday', time: 'Closed' },
-    ],
-    mapQuery: 'MES+Hospital+Gandhi+Nagar+Chittorgarh+Rajasthan',
-    color: '#000000',
-    badge: 'Branch',
-    badgeColor: '#000000',
-    landmark: 'Inside MES Hospital, 3rd Floor',
-    isMain: false,
-    udaipurExtra: false,
-    bhilwaraExtra: false,
+    ahmedabadExtra: false,
   },
   {
     id: 4,
@@ -128,19 +113,20 @@ const branches = [
     city: 'Ahmedabad',
     state: 'Gujarat',
     address: '601-603, Golden Square, Kalyan Chowk, Nikol, Ahmedabad, Gujarat',
-    phone: '+91 99289 81863',
+    phone: '+91 91193 22486',
     hours: [
       { days: 'Mon – Sat', time: '8:00 AM – 8:00 PM' },
       { days: 'Sunday', time: '10:00 AM – 4:00 PM' },
     ],
     mapQuery: 'Golden+Square+Kalyan+Chowk+Nikol+Ahmedabad+Gujarat',
-    color: '#dc2626',
+    color: '#000000',
     badge: 'Branch',
-    badgeColor: '#dc2626',
+    badgeColor: '#000000',
     landmark: 'Golden Square Building, Kalyan Chowk, Nikol',
     isMain: false,
     udaipurExtra: false,
     bhilwaraExtra: false,
+    ahmedabadExtra: false,
   },
   {
     id: 5,
@@ -148,19 +134,41 @@ const branches = [
     city: 'Ahmedabad',
     state: 'Gujarat',
     address: 'F 425 Sumel 11, Nr. Namaste circle, Shahibag. 380004',
-    phone: '+91 99289 81863',
+    phone: '+91 91193 22486',
     hours: [
       { days: 'Mon – Sat', time: '8:00 AM – 8:00 PM' },
       { days: 'Sunday', time: '10:00 AM – 4:00 PM' },
     ],
     mapQuery: 'Sumel+11+Shahibag+Ahmedabad+Gujarat',
-    color: '#000000',
+    color: '#dc2626',
     badge: 'Branch',
-    badgeColor: '#000000',
+    badgeColor: '#dc2626',
     landmark: 'Nr. Namaste Circle, Shahibag',
     isMain: false,
     udaipurExtra: false,
     bhilwaraExtra: false,
+    ahmedabadExtra: true,
+  },
+  {
+    id: 3,
+    name: 'JK Physio — Chittorgarh',
+    city: 'Chittorgarh',
+    state: 'Rajasthan',
+    address: 'MES Hospital, 3rd Floor, Sector 5, Gandhi Nagar, Chittorgarh, Rajasthan',
+    phone: '+91 79765 00688',
+    hours: [
+      { days: 'Mon – Sat', time: '9:00 AM – 7:00 PM' },
+      { days: 'Sunday', time: 'Closed' },
+    ],
+    mapQuery: 'MES+Hospital+Gandhi+Nagar+Chittorgarh+Rajasthan',
+    color: '#dc2626',
+    badge: 'Branch',
+    badgeColor: '#dc2626',
+    landmark: 'Inside MES Hospital, 3rd Floor',
+    isMain: false,
+    udaipurExtra: false,
+    bhilwaraExtra: false,
+    ahmedabadExtra: false,
   },
   {
     id: 6,
@@ -168,26 +176,28 @@ const branches = [
     city: 'Gurugram',
     state: 'Haryana',
     address: '65J-01, Sector 83, Vatika Sector Service Road, Gurugram, HR-122004',
-    phone: '+91 99289 81863',
+    phone: '+91 91193 12486',
     hours: [
       { days: 'Mon – Sat', time: '8:00 AM – 8:00 PM' },
       { days: 'Sunday', time: '10:00 AM – 4:00 PM' },
     ],
     mapQuery: 'Sector+83+Vatika+Gurugram+Haryana',
-    color: '#dc2626',
+    color: '#000000',
     badge: 'Branch',
-    badgeColor: '#dc2626',
+    badgeColor: '#000000',
     landmark: 'Vatika Sector Service Road, Sector 83',
     isMain: false,
     udaipurExtra: false,
     bhilwaraExtra: false,
+    ahmedabadExtra: false,
   },
 ];
 
 // ─── Branch Card ──────────────────────────────────────────────────────────────
-const BranchCard = ({ branch, index, visible, showMoreUdaipur, onToggleMore, showMoreBhilwara, onToggleBhilwara }) => {
+const BranchCard = ({ branch, index, visible, showMoreUdaipur, onToggleMore, showMoreBhilwara, onToggleBhilwara, showMoreAhmedabad, onToggleAhmedabad }) => {
   const isUdaipurMain = branch.id === 1;
   const isBhilwaraMain = branch.id === 2;
+  const isAhmedabadMain = branch.id === 4;
 
   return (
     <div
@@ -290,6 +300,20 @@ const BranchCard = ({ branch, index, visible, showMoreUdaipur, onToggleMore, sho
             )}
           </button>
         )}
+
+        {isAhmedabadMain && (
+          <button
+            onClick={onToggleAhmedabad}
+            className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-semibold cursor-pointer transition-all"
+            style={{ border: '2px dashed #dc2626', color: '#dc2626', background: '#fff5f5' }}
+          >
+            {showMoreAhmedabad ? (
+              <><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" /></svg>Hide Other Ahmedabad Branches</>
+            ) : (
+              <><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>+1 More Branch in Ahmedabad</>
+            )}
+          </button>
+        )}
       </div>
     </div>
   );
@@ -300,6 +324,7 @@ const Branches = ({ onHomePage = false }) => {
   const [visible, setVisible] = useState(false);
   const [showMoreUdaipur, setShowMoreUdaipur] = useState(false);
   const [showMoreBhilwara, setShowMoreBhilwara] = useState(false);
+  const [showMoreAhmedabad, setShowMoreAhmedabad] = useState(false);
   const sectionRef = useRef(null);
   const navigate = useNavigate();
 
@@ -315,7 +340,7 @@ const Branches = ({ onHomePage = false }) => {
     return () => observer.disconnect();
   }, []);
 
-  const visibleBranches = branches.filter((b) => (!b.udaipurExtra || showMoreUdaipur) && (!b.bhilwaraExtra || showMoreBhilwara));
+  const visibleBranches = branches.filter((b) => (!b.udaipurExtra || showMoreUdaipur) && (!b.bhilwaraExtra || showMoreBhilwara) && (!b.ahmedabadExtra || showMoreAhmedabad));
 
   const handleToggleMore = () => {
     setShowMoreUdaipur((prev) => {
@@ -332,6 +357,16 @@ const Branches = ({ onHomePage = false }) => {
       if (prev) return false;
       setTimeout(() => {
         document.getElementById('branch-21')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 50);
+      return true;
+    });
+  };
+
+  const handleToggleAhmedabad = () => {
+    setShowMoreAhmedabad((prev) => {
+      if (prev) return false;
+      setTimeout(() => {
+        document.getElementById('branch-5')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }, 50);
       return true;
     });
@@ -389,7 +424,7 @@ const Branches = ({ onHomePage = false }) => {
         <div className="max-w-screen-xl mx-auto px-12">
 
           <div className={`flex flex-wrap gap-3 justify-center mb-14 fade-up ${visible ? 'visible' : ''}`}>
-            {branches.filter((b) => !b.udaipurExtra && !b.bhilwaraExtra).map((b) => (
+            {branches.filter((b) => !b.udaipurExtra && !b.bhilwaraExtra && !b.ahmedabadExtra).map((b) => (
               <button
                 key={b.id}
                 onClick={() => document.getElementById(`branch-${b.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
@@ -424,6 +459,8 @@ const Branches = ({ onHomePage = false }) => {
                   onToggleMore={handleToggleMore}
                   showMoreBhilwara={showMoreBhilwara}
                   onToggleBhilwara={handleToggleBhilwara}
+                  showMoreAhmedabad={showMoreAhmedabad}
+                  onToggleAhmedabad={handleToggleAhmedabad}
                 />
               </div>
             ))}
